@@ -35,7 +35,7 @@
 <p><strong>Zero-Day:</strong> Herstellerunbekannte Schwachstelle, die ausgenutzt wird bevor der Hersteller die Schwachstelle kennt. (Auch: Zero-Day Attack)</p>
 <p><strong>ATP (Advanced Persistent Threat):</strong> Unbemerktes Daten abfangen eines Systems über längere Zeit (meist durch Staat)</p>
 <h2 id="angreifertypen">Angreifertypen</h2>
-<p><img src="" alt="Angreifertypen.png"></p>
+<p><a href="https://raw.githubusercontent.com/LeonStoldt/IT-Security/master/images/Angreifertypen.png"><img src="https://raw.githubusercontent.com/LeonStoldt/IT-Security/master/images/Angreifertypen.png" alt="Angreifertypen.png"></a></p>
 <h4 id="gefährliche-kombinationen">Gefährliche Kombinationen</h4>
 <ul>
 <li>Angreifer + frustrierte Mitarbeiter</li>
@@ -146,7 +146,7 @@
 </li>
 <li>
 <p><strong>Botnet:</strong> Geräte, die durch einen Virus o.ä. infiziert wurden und in der Kontrolle der Angreifer sind, können zu einem Bot-Netzwerk werden und somit verteilte Aktivitäten unbemerkt durchgeführt werden. (Bsp. Verbreitung von Spam und Viren, DoS-Attacken)<br>
-<img src="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/01-03-malware/570px-Botnet.svg.png" alt="Botnet-Veranschaulichung"></p>
+<a href="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/01-03-malware/570px-Botnet.svg.png"><img src="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/01-03-malware/570px-Botnet.svg.png" alt="Botnet-Veranschaulichung"></a></p>
 </li>
 </ul>
 <h2 id="anti-virus-software-av">Anti-Virus Software (AV)</h2>
