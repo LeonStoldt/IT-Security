@@ -4,28 +4,28 @@
 ---
 
 <h1 id="it-security-lecture">IT Security Lecture</h1>
-<h3 id="semester-1---information--network-security">Semester 1 - Information &amp; Network Security</h3>
+<h3 id="semester-1---informations--und-netzwerksicherheit">Semester 1 - Informations- und Netzwerksicherheit</h3>
 <ol>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-01-motivation.md">Motivation</a>  (Vulnerabilities, Exploits, Threat Actors, Case Studies)</li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-02-security_goals.md">Security Goals</a>  (Confidentiality, Integrity, Availability)</li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-03-malware.md">Malware</a>  (Viruses, Worms, Trojans, Botnets, Ransomware, Cryptojackers)</li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-04-network_security.md">Network Security</a>  (VPN, Wireless Security, Firewalls/IDS/IPS/WAF)</li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-05-encryption.md">Encryption</a>  (WEP/WPA2, SSL/TLS, PGP, Disk Encryption)</li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-06-security_mgmt_and_org.md">Security Management &amp; Organization</a></li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-01-motivation.md">Motivation</a>  (Vulnerabilities, Exploits, Angreifer)</li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-02-security_goals.md">Sicherheitsziele</a>  (Confidentiality, Integrity, Availability)</li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-03-malware.md">Malware</a>  (Viren, Würmer, Trojaner, Botnets, Ransomware, Cryptojackers)</li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-04-network_security.md">Netzwerksicherheit</a>  (VPN, Wireless Security, Firewalls/IDS/IPS/WAF)</li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-05-encryption.md">Verschlüsselung</a>  (WEP/WPA2, SSL/TLS, PGP, Disk Encryption)</li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-06-security_mgmt_and_org.md">Sicherheitsmanagement und -rorganisation</a></li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-07-threat_modeling.md">Threat Modeling</a></li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-08-penetration_testing.md">Penetration Testing</a></li>
 </ol>
-<h3 id="semester-2---application-security--sdlc"><a href="https://github.com/LeonStoldt/it-security-lecture#semester-2---application-security--sdlc"></a>Semester 2 - Application Security &amp; SDLC</h3>
+<h3 id="semester-2---anwendungssicherheit-und-systementwicklungslebenszyklus"><a href="https://github.com/LeonStoldt/it-security-lecture#semester-2---application-security--sdlc"></a>Semester 2 - Anwendungssicherheit und Systementwicklungslebenszyklus</h3>
 <ol>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-01-owasp.md">Open Web Application Security Project</a>  (OWASP)</li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-02-xss.md">Cross-Site Scripting (XSS)</a></li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-03-injection.md">Injection</a></li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-04-authentication_flaws.md">Authentication Flaws</a></li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-05-authorization_flaws.md">Authorization Flaws</a></li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-06-sensitive_data.md">Sensitive Data</a></li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-07-insecure_dependencies_and_configuration.md">Insecure Dependencies &amp; Configuration</a></li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-08-xxe_and_deserialization.md">XXE &amp; Deserialization</a></li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-09-sdlc.md">Secure Development Lifecycle</a></li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-04-authentication_flaws.md">Authentifizierungsfehler</a></li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-05-authorization_flaws.md">Authorisierungsfehler</a></li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-06-sensitive_data.md">Sensible Daten</a></li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-07-insecure_dependencies_and_configuration.md">Unsichere Abhängigkeiten und Konfigurationen</a></li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-08-xxe_and_deserialization.md">XXE &amp; Deserialisierung</a></li>
+<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-09-sdlc.md">Sicherer Entwicklungslebenszyklus</a></li>
 </ol>
 <hr>
 <h1 id="motivation">1. Motivation</h1>
@@ -117,4 +117,81 @@
 </tr>
 </tbody>
 </table><h1 id="malware">Malware</h1>
+<!-- theme: default -->
+<!-- paginate: true -->
+<!-- footer: Copyright (c) by **Bjoern Kimminich** | Licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) -->
+<h1 id="malware-1">Malware</h1>
+<h2 id="kategorien">Kategorien</h2>
+<ul>
+<li>
+<p><strong>Virus:</strong> Computerviren verbreiten sich durch infizierte Dateien oder Computersysteme und anschließender Replizierung von sich selbst. Für den Erhalt eines Virus ist eine Benutzerinteraktion erforderlich. Es gibt harmlose und gefährliche Viren.</p>
+</li>
+<li>
+<p><strong>Wurm:</strong> Würmer sind Viren, die keine Benutzerinteraktion erfordern.</p>
+</li>
+<li>
+<p><strong>Trojanisches Pferd:</strong> Trojanische Pferde sind Viren, die in einem (nützlichen) Computerprogramm versteckt sind.</p>
+</li>
+<li>
+<p><strong>Spyware:</strong> Software, die Informationen eines Systems ohne Einwilligung sammelt (Bsp. Tastaturdaten, Screenshots, Email-Adressen). Die gesammelten Daten werden häufig online verkauft und dienen für Spam, Marketingzwecke, Identitätsdiebstahl etc.</p>
+</li>
+<li>
+<p><strong>Rootkit:</strong> Software, die ohne Wissen des Benutzers installiert und ausgeblendet werden kann und Aktionen überwachen, Programme ändern oder andere Funktionen ausführen kann.</p>
+</li>
+<li>
+<p><strong>Ransomware:</strong> Verweigerung des Zugriffs auf ein System, bis ein Lösegeld bezahlt wurde (Bsp. Verschlüsselung von Daten). Verbreitung erfolgt über zugängliche Systeme (Bsp. geteilte Laufwerke)</p>
+</li>
+<li>
+<p><strong>Cryptojacker:</strong> Software, die unbemerkt installiert wird und die Rechenleistung des infizierten Rechners für Cryptomining ausnutzt. Der Angriff bleibt durch eine etwas geringere Auslastung des Systems häufig unbemerkt.</p>
+</li>
+<li>
+<p><strong>Botnet:</strong> Geräte, die durch einen Virus o.ä. infiziert wurden und in der Kontrolle der Angreifer sind, können zu einem Bot-Netzwerk werden und somit verteilte Aktivitäten unbemerkt durchgeführt werden. (Bsp. Verbreitung von Spam und Viren, DoS-Attacken)<br>
+<img src="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/01-03-malware/570px-Botnet.svg.png" alt="Botnet-Veranschaulichung"></p>
+</li>
+</ul>
+<h2 id="anti-virus-software-av">Anti-Virus Software (AV)</h2>
+<p>Anti-Virus Software (auch: Anti-Malware Software) ist eine Software zum Verhindern, Erkennen und Entfernen von Malware.</p>
+<p>Die Software verwendet für die <strong>Erkennung von Malware</strong> folgende Identifikationsmethoden:</p>
+<ul>
+<li>Signaturbasierte Erkennung</li>
+<li>Heuristiken</li>
+<li>Rootkit-Erkennung</li>
+<li>Echtzeit-Sicherung</li>
+</ul>
+<p><strong>Nachteile</strong> von Anti-Viren Software:</p>
+<ul>
+<li>(Abo-)Kosten</li>
+<li>geringere Performance</li>
+<li>falsche Warnmeldungen</li>
+<li>kein Schutz gegen neue Viren (Polymorpher Code)</li>
+<li>Beschädigung von Dateien (beim Entfernen von Malware)</li>
+<li>möglicher Angriffsweg (durch den OS-Zugriff)</li>
+</ul>
+<h2 id="top-5-sicherheitsstrategien-von-sicherheitsexperten">Top 5 Sicherheitsstrategien von Sicherheitsexperten</h2>
+<ol>
+<li>Software Updates installieren</li>
+<li>Verwendung einzigartiger Passwörter</li>
+<li>2-Faktor-Authentifizierung verwenden</li>
+<li>Starke Passwörter benutzen</li>
+<li>Passwort Manager verwenden</li>
+</ol>
+<hr>
+<h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
+<ul>
+<li>
+<h3 id="virustotal"><a href="https://www.virustotal.com/">Virustotal</a></h3>
+</li>
+<li>
+<h3 id="haveibeenpwned"><a href="https://haveibeenpwned.com/">HaveIBeenPwned</a></h3>
+</li>
+<li>
+<h3 id="owasp"><a href="https://owasp.org/">OWASP</a></h3>
+</li>
+<li>
+<h3 id="owasp-top-10"><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></h3>
+</li>
+<li>
+<h3 id="template"><a href="https://www.google.com">template</a></h3>
+</li>
+</ul>
 
