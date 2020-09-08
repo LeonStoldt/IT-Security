@@ -9,4 +9,4 @@
 - Notes from my lectures
 - Script and slides from my lecture which can be found here: [bkimminich/it-security-lecture](https://github.com/bkimminich/it-security-lecture) [English Version]
 
-# [Click here to open up the content](https://leonstoldt.github.io/it-security/page)
+# [Click here to open up the content](https://leonstoldt.github.io/IT-Security/page)
