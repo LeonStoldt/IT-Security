@@ -117,10 +117,6 @@
 </tr>
 </tbody>
 </table><h1 id="malware">Malware</h1>
-<!-- theme: default -->
-<!-- paginate: true -->
-<!-- footer: Copyright (c) by **Bjoern Kimminich** | Licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) -->
-<h1 id="malware-1">Malware</h1>
 <h2 id="kategorien">Kategorien</h2>
 <ul>
 <li>
