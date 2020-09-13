@@ -194,6 +194,13 @@
 </li>
 </ul>
 <h1 id="wireless-security">Wireless Security</h1>
+<h3 id="beispiele-für-angreifbare-wireless-technologien">Beispiele für angreifbare Wireless Technologien:</h3>
+<ul>
+<li>Wifi</li>
+<li>Bluetooth</li>
+<li>NFC</li>
+<li>etc.</li>
+</ul>
 <h3 id="vorschläge-für-wireless-security">Vorschläge für Wireless Security</h3>
 <blockquote>
 <ol>
@@ -208,156 +215,92 @@
 <li>Arbeits- und Identifikationskarten versteckt halten</li>
 </ol>
 </blockquote>
-<h2 id="todo">TODO</h2>
-<h1 id="exercise-4.6-house">Exercise 4.6 (🏠)</h1>
+<h2 id="datencenter-sicherheit">Datencenter Sicherheit</h2>
+<ul>
+<li>
+<p><strong>Netzwerk Firewall:</strong> Beobachtet und filtert Netzwerk Traffic auf basis benutzerdefinierter Regeln. Soll böswillige Zugriffe auf Server verhindern und nur legitimen Traffic zulassen.</p>
+<ul>
+<li><strong>Stateless Firewall:</strong> Überprüft isoliert einzelne Pakete und lässt diese auf Basis des Headers zu oder nicht.</li>
+<li><strong>Stateful Firewall:</strong> Bestimmen den Verbindungsstatus von Paketen und können verwandte Pakete sammeln. Die Regeln werden auf den Datenverkehr angewendet.</li>
+<li><strong>Anwendungsfirewall (Proxy-Based Firewall):</strong> Analysieren die übertragenen Daten und Regeln können für einzelne Dienste / Anwendungen spezifisch angewendet werden.</li>
+</ul>
+</li>
+<li>
+<p><strong>Firewall Regeln (Beispiel):</strong> <code>FROM</code> <em>source</em> <code>TO</code> <em>destination</em> <code>ALLOW|BLOCK</code> <em>protocol</em> <code>PORT</code>   <em>port(s)</em></p>
+</li>
+<li>
+<p><strong>DMZ (DeMilitarized Zone):</strong> Teilnetz, welches Zugriff auf öffentliche Dienste hat und gleichzeitig interne Netze erreichen kann. Dieser Bereich ist mit einer Firewall durch den Angriff aus dem öffentlichen Netz geschützt und durch eine weitere Firewall vom internen Netz getrennt.</p>
+</li>
+<li>
+<p><strong>IDS (Intrusion Detection System):</strong> <em>[Einbruchserkennungssystem]</em> Überwacht ein Netzwerk oder System auf böswillige Aktivitäten und meldet diese.</p>
+</li>
+<li>
+<p><strong>IPS (Intrusion Prevention System):</strong> <em>[Einbruchsverhinderungssystem]</em> Erweitert das IDS durch die Überwachung von Netzwerk Traffic und Systemaktivitäten und kann den erkannten Einbruch aktiv verhindern bzw. blockieren.</p>
+</li>
+<li>
+<p><strong>Einschränkungen:</strong></p>
+<ul>
+<li>Hohe Anzahl von Fehlalarmen sorgt für das Ignorieren oder Übersehen von realen Angriffen</li>
+<li>Kann keine Netzwerkschwächen kompensieren</li>
+<li>Verschlüsselte Pakete werden nicht durch IDS verarbeitet</li>
+</ul>
+</li>
+<li>
+<p><strong>NIDS (Network IDS):</strong> Anwendung eines IDS im Netzwerk</p>
+</li>
+<li>
+<p><strong>HIDS (Host IDS):</strong> Anwendung und Überwachung auf einem einzelnen Host. Hierbei werden Systemdaten mit vorherigen zuständen beobachtet und Änderungen von kritischen Systemdaten gemeldet.</p>
+</li>
+</ul>
+<h1 id="sicherheitsmanagement-und-organisation">Sicherheitsmanagement und Organisation</h1>
+<h2 id="jobtitel-und--beschreibungen">Jobtitel und -beschreibungen</h2>
+<ul>
+<li>
+<p><strong>Security Analyst:</strong> Analyse und Bewertugen von Schwachstellen in der Infrastruktur (Software, Hardware, Netzwerk). Anschließende Empfehlung von Best Pracises und Lösungen.</p>
+</li>
+<li>
+<p><strong>Security Engineer:</strong> Analyse von Daten und Protokollen zur Sicherheitsüberwachung.</p>
+</li>
+<li>
+<p><strong>Security Architect:</strong> Entwirft das Sicherheitssystem</p>
+</li>
+<li>
+<p><strong>Security Administrator:</strong> Installiert und verwaltet Sicherheitssysteme der Organisation</p>
+</li>
+<li>
+<p><strong>Security Software Developer:</strong> Implementiert Sicherheit in Anwendungssoftware und entwickelt Sicherheitssoftware und -tools.</p>
+</li>
+<li>
+<p><strong>Chief Information Security Officer:</strong> Führungsposition mit Verantwortung für die gesamte Abteilung.</p>
+</li>
+<li>
+<p><strong>Penetration Tester:</strong> Sucht nach Schwachstellen, identifiziert sie und nutzt sie aus (als Nachweis).</p>
+</li>
+<li>
+<p><strong>Cyber Incident Response Team (CIRT):</strong> Gruppe, die für die Reaktionen auf Sicherheitsverletzungen, Viren und Sicherheitsvorfälle zuständig ist.</p>
+<ul>
+<li><strong>1. Vorbereitung:</strong> Reaktionsplan / -strategie</li>
+<li><strong>2. Identifizierung:</strong> Schadenserkennung</li>
+<li><strong>3. Eindämmung:</strong> Verhinderung weiterer Schäden</li>
+<li><strong>4. Ausrottung:</strong> Beseitigung der Bedrohung und zurücksetzen der Systeme</li>
+<li><strong>5. Widerherstellung:</strong> Testen, Überwachen,  Validieren und Inbetriebnahme</li>
+<li><strong>6. Lessons Learned:</strong> Aus Angriff lernen und Sicherheitssystem verbessern</li>
+</ul>
+</li>
+</ul>
+<h1 id="security-awareness">Security Awareness</h1>
+<ul>
+<li>Schulungsprogramme für Mitarbeiter</li>
+<li>Individuelle Verantwortung für Sicherheitsrechtlinien des Unternehmens</li>
+<li>Maßnahmen zur Prüfung (Audits)</li>
+</ul>
+<h3 id="schritte-von-security-awareness">Schritte von Security Awareness</h3>
 <ol>
-<li>Install any popular NFC reader app on your smartphone</li>
-<li>Scan a few of your credit cards, health insurance cards, ID cards<br>
-etc. and document what personal information you can retrieve from<br>
-each</li>
-<li>Consider getting a Blocking Card or RFID-protected purse to prevent<br>
-<a href="https://en.wikipedia.org/wiki/RFID_skimming">RFID skimming</a></li>
+<li>Aktuellen Zustand ermitteln</li>
+<li>Security Awareness Programm ermitteln</li>
+<li>Bereitstellung des Programms für Mitarbeiter</li>
+<li>Messung der Fortschritte und ggf. Überarbeitung des Programms</li>
 </ol>
-<hr>
-<h1 id="data-center-security">Data Center Security</h1>
-<hr>
-<h1 id="network-firewall">Network Firewall</h1>
-<blockquote>
-<p>A firewall is a system that provides network security by <strong>filtering<br>
-incoming and outgoing network traffic based on a set of user-defined<br>
-rules</strong>. In general, the purpose of a firewall is to <strong>reduce or<br>
-eliminate the occurrence of unwanted network communications</strong> while<br>
-allowing all legitimate communication to flow freely. In most server<br>
-infrastructures, firewalls provide an essential layer of security<br>
-that, combined with other measures, prevent attackers from accessing<br>
-your servers in malicious ways. [<sup class="footnote-ref"><a href="#fn1" id="fnref1">1</a></sup>]</p>
-</blockquote>
-<hr>
-<h1 id="types-of-firewalls">Types of Firewalls</h1>
-<blockquote>
-<ul>
-<li>
-<p><small><strong>Packet filtering</strong>, or stateless, <strong>firewalls</strong> work by<br>
-inspecting individual packets in isolation. As such, they are<br>
-unaware of connection state and can only allow or deny packets based<br>
-on individual packet headers.</small></p>
-</li>
-<li>
-<p><small><strong>Stateful firewalls</strong> are able to determine the connection<br>
-state of packets, which makes them much more flexible than stateless<br>
-firewalls. They work by collecting related packets until the<br>
-connection state can be determined before any firewall rules are<br>
-applied to the traffic.</small></p>
-</li>
-<li>
-<p><small><strong>Application firewalls</strong> go one step further by analyzing<br>
-the data being transmitted, which allows network traffic to be<br>
-matched against firewall rules that are specific to individual<br>
-services or applications. These are also known as proxy-based<br>
-firewalls. [<sup class="footnote-ref"><a href="#fn1" id="fnref1:1">1</a></sup>]</small></p>
-</li>
-</ul>
-</blockquote>
-<hr>
-<h1 id="firewall-rules">Firewall Rules</h1>
-<p>A simple firewall could have rules defined like this:</p>
-<ul>
-<li><code>FROM</code> <em>source</em> <code>TO</code> <em>destination</em> <code>ALLOW|BLOCK</code> <em>protocol</em> <code>PORT</code><br>
-<em>port(s)</em></li>
-</ul>
-<p>Example policy for incoming traffic using above rule syntax:</p>
-<ol>
-<li><code>FROM</code> <em>external</em> <code>TO</code> <em>internal</em> <code>ALLOW</code> <em>tcp</em> <code>PORT</code> <em>80|443</em></li>
-<li><code>FROM</code> <em>194.94.98.42</em> <code>TO</code> <em>internal</em> <code>ALLOW</code> <em>tcp</em> <code>PORT</code> <em>22</em></li>
-<li><code>FROM</code> <em>194.94.98.*</em> <code>TO</code> <em>internal</em> <code>BLOCK</code> <em>tcp</em> <code>PORT</code> <em>22</em></li>
-<li><code>FROM</code> <em>any</em> <code>TO</code> <em>any</em> <code>BLOCK</code> <em>any</em> <code>PORT</code> <em>any</em></li>
-</ol>
-<hr>
-<h1 id="default-policy">Default Policy</h1>
-<p>To keep configuration effort and complexity low, Firewalls fall back to<br>
-a default policy when no explicitly defined rule matches the traffic.</p>
-<ul>
-<li><code>FROM</code> <em>any</em> <code>TO</code> <em>any</em> <code>BLOCK</code> <em>any</em> <code>PORT</code> <em>any</em> = Block everything<br>
-by default (“White List”)</li>
-</ul>
-<!-- -->
-<ul>
-<li><code>FROM</code> <em>any</em> <code>TO</code> <em>any</em> <code>ALLOW</code> <em>any</em> <code>PORT</code> <em>any</em> = Allow everything<br>
-by default (“Black List”)</li>
-</ul>
-<p>ℹ️ For all incoming traffic a White List is<br>
-recommended to maximize security. A Black List would suffice for<br>
-outgoing traffic adding blocks only for some sites, e.g. <small><code>FROM</code><br>
-<em>194.94.98.*</em> <code>TO</code> <em>youtube.*</em> <code>BLOCK</code> <em>tcp</em> <code>PORT</code> <em>80|443</em></small></p>
-<hr>
-<!-- _footer: Traditional Single Layer DMZ with two flanking firewalls, 2014 Dgondim, used under CC-BY-SA 4.0 -->
-<h4 id="dmz-with-two-firewalls">DMZ with two Firewalls</h4>
-<p><img src="images/01-04-network_security/Traditional_Single_Layer_DMZ_with_two_flanking_firewalls.png" alt="2-Layer DMZ with 3 Firewalls"></p>
-<hr>
-<!-- _footer: Inner-Outer Two layer DMZ with three or more flanking firewalls, 2014 Dgondim, used under CC-BY-SA 4.0 -->
-<h4 id="two-layer-dmz-with-three-firewalls">Two-Layer DMZ with three Firewalls</h4>
-<p><img src="images/01-04-network_security/Inner-Outer_Two_layer_DMZ_with_three_or_more_flanking_firewalls.png" alt="2-Layer DMZ with 3 Firewalls"></p>
-<hr>
-<h1 id="idsips">IDS/IPS</h1>
-<h2 id="intrusion-detection--prevention-system">(Intrusion Detection / Prevention System)</h2>
-<hr>
-<h1 id="definition">Definition</h1>
-<blockquote>
-<p>An <strong>intrusion detection system (IDS)</strong> is a device or software<br>
-application that <strong>monitors a network or systems for malicious<br>
-activity or policy violations</strong>. Any malicious activity or violation<br>
-is typically <strong>reported either to an administrator or collected<br>
-centrally</strong> […].</p>
-<p><strong>Intrusion prevention systems</strong> are considered extensions of<br>
-intrusion detection systems because they both monitor network traffic<br>
-and/or system activities for malicious activity. The main differences<br>
-are, unlike intrusion detection systems, <strong>intrusion prevention<br>
-systems are placed in-line and are able to actively prevent or block<br>
-intrusions</strong> that are detected. [<sup class="footnote-ref"><a href="#fn2" id="fnref2">2</a></sup>]</p>
-</blockquote>
-<hr>
-<h1 id="network-based-ids">Network-based IDS</h1>
-<blockquote>
-<p>Network intrusion detection systems (NIDS) are placed at a strategic<br>
-point or points within the network to monitor traffic to and from all<br>
-devices on the network. It performs an analysis of passing traffic on<br>
-the entire subnet, and matches the traffic that is passed on the<br>
-subnets to the library of known attacks. Once an attack is identified,<br>
-or abnormal behavior is sensed, the alert can be sent to the<br>
-administrator. [<sup class="footnote-ref"><a href="#fn2" id="fnref2:1">2</a></sup>]</p>
-</blockquote>
-<hr>
-<!-- _footer: DIFFERENCE BETWEEN IPS AND IDS IN NETWORK SECURITY, 2017, https://ipwithease.com/ -->
-<h1 id="ids-vs.-ips-smallboth-network-basedsmall">IDS vs. IPS <small>(both Network-based)</small></h1>
-<p><img src="images/01-04-network_security/difference-between-ips-and-ids-in-network-security.png" alt="IDS vs. IPS"></p>
-<hr>
-<h2 id="limitations">Limitations</h2>
-<ul>
-<li>Noise (e.g. from software bugs or corrupt DNS data) can severely limit<br>
-an intrusion detection system’s effectiveness</li>
-<li>Number of real attacks is often so far below the number of<br>
-false-alarms that the real attacks are often missed and ignored</li>
-<li>Lag between a new threat discovery and its signature being applied to<br>
-the IDS</li>
-<li>Cannot compensate for weak identification and authentication<br>
-mechanisms or for weaknesses in network protocols</li>
-<li>Encrypted packets are not processed by most intrusion detection<br>
-devices [<sup class="footnote-ref"><a href="#fn2" id="fnref2:2">2</a></sup>]</li>
-</ul>
-<hr>
-<h1 id="host-based-ids">Host-based IDS</h1>
-<blockquote>
-<p>Host intrusion detection systems (HIDS) run on individual hosts or<br>
-devices on the network. A HIDS <strong>monitors the inbound and outbound<br>
-packets from the device only</strong> and will alert the user or<br>
-administrator if suspicious activity is detected. It <strong>takes a<br>
-snapshot of existing system files and matches it to the previous<br>
-snapshot</strong>. If the critical system files were modified or deleted, an<br>
-alert is sent to the administrator to investigate. An example of HIDS<br>
-usage can be seen on mission critical machines, which are not expected<br>
-to change their configurations. [<sup class="footnote-ref"><a href="#fn2" id="fnref2:3">2</a></sup>]</p>
-</blockquote>
-<hr>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
 <li>
@@ -379,13 +322,4 @@ to change their configurations. [<sup class="footnote-ref"><a href="#fn2" id="fn
 <h3 id="wigle"><a href="https://www.wigle.net/">WiGLE</a></h3>
 </li>
 </ul>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://www.digitalocean.com/community/tutorials/what-is-a-firewall-and-how-does-it-work">https://www.digitalocean.com/community/tutorials/what-is-a-firewall-and-how-does-it-work</a> <a href="#fnref1" class="footnote-backref">↩︎</a> <a href="#fnref1:1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p><a href="https://en.wikipedia.org/wiki/Intrusion_detection_system">https://en.wikipedia.org/wiki/Intrusion_detection_system</a> <a href="#fnref2" class="footnote-backref">↩︎</a> <a href="#fnref2:1" class="footnote-backref">↩︎</a> <a href="#fnref2:2" class="footnote-backref">↩︎</a> <a href="#fnref2:3" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 
