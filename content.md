@@ -301,6 +301,34 @@
 <li>Bereitstellung des Programms für Mitarbeiter</li>
 <li>Messung der Fortschritte und ggf. Überarbeitung des Programms</li>
 </ol>
+<h1 id="threat-modeling">Threat Modeling</h1>
+<ul>
+<li>Identifizierung und Priorisierung potenzieller Bedrohungen und Schwachstellen aus der Sicht eines hypothetischen Angreifers</li>
+<li>Zweck: Systematische Analyse des Profils eines Angreifers und Ermittlung des wahrscheinlichsten Angriffspunkts - zum Nutzen der Verteidiger</li>
+</ul>
+<h3 id="gründe-für-die-bedrohungsmodellierung">Gründe für die Bedrohungsmodellierung</h3>
+<ul>
+<li>Sicherheitslücken frühzeitig finden</li>
+<li>Verstehen der eigenen Sicherheitsanforderungen</li>
+<li>Entwicklung und Lieferung besserer Produkte</li>
+<li>Behebung von Problemen, die nicht durch anderen Technologien behoben werden (können)</li>
+</ul>
+<h2 id="angriffsbäume">Angriffsbäume</h2>
+<ul>
+<li>Darstellung von Angriffen eines Systems durch eine Baumstruktur</li>
+<li>Das Ziel wird als Wurzelknoten dargestellt</li>
+<li>Angriffsmöglichkeiten werden als Blätter dargestellt</li>
+<li>Angriffsmöglichkeiten können durch <code>AND</code> verbunden werden</li>
+<li>Blätter werden durch <code>I (Impossible)</code> oder <code>P (Possible)</code> gekennzeichnet</li>
+<li>Potentielle Angriffswege werden durch gestrichelte Linien dargestellt</li>
+</ul>
+<p><a href="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/01-07-threat_modeling/paper-attacktrees-fig2.gif"><img src="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/01-07-threat_modeling/paper-attacktrees-fig2.gif" alt="Attack Tree"></a></p>
+<h2 id="trust-boundaries-vertrauensgrenzen">Trust Boundaries (Vertrauensgrenzen)</h2>
+<ul>
+<li>Bedrohungen, die Vertrauensgrenzen überschreiten sind relevante Bedrohungen</li>
+</ul>
+<h1 id="todo---continue">TODO - continue</h1>
+<hr>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
 <li>
