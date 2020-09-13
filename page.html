@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -123,10 +123,6 @@
 </tr>
 </tbody>
 </table><h1 id="malware">Malware</h1>
-<!-- theme: default -->
-<!-- paginate: true -->
-<!-- footer: Copyright (c) by **Bjoern Kimminich** | Licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) -->
-<h1 id="malware-1">Malware</h1>
 <h2 id="kategorien">Kategorien</h2>
 <ul>
 <li>
@@ -181,6 +177,163 @@
 <li>Starke Passwörter benutzen</li>
 <li>Passwort Manager verwenden</li>
 </ol>
+<h1 id="network-security">Network Security</h1>
+<h2 id="osi-model">OSI-Model</h2>
+<p>Siehe <a href="https://leonstoldt.github.io/technische-Grundlagen-der-Informatik/page">Technische Grundlagen der Informatik</a></p>
+<h2 id="vpn-virtual-private-network">VPN (Virtual Private Network)</h2>
+<ul>
+<li>VPN bietet einen Sicherheitsmechanismus für verschlüsselten und gekapselten Netzwerk Traffic</li>
+<li>VPN dient als “sicherer Tunnel” durch ungesicherte Netzwerke zum Zielsystem</li>
+</ul>
+<h3 id="verwendung-von-vpn">Verwendung von VPN:</h3>
+<ul>
+<li>
+<p><strong>Remote Access VPN:</strong> Verbindung eines Computers mit einem entfernten, privaten Netzwerk (Bsp. Heimnetzwerk)<br>
+<a href="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/01-04-network_security/vpn_remote-to-intranet.gif"><img src="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/01-04-network_security/vpn_remote-to-intranet.gif" alt="Remote Access VPN"></a></p>
+</li>
+<li>
+<p><strong>Site-to-Site VPN:</strong> Verbindet zwei private Netzwerke oder Teile eines Netzwerks. Hierdurch können Organisationen eine sichere VPN-Verbindung über das Internet zu anderen Organisationen herstellen.<br>
+<a href="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/01-04-network_security/vpn_two-sites.gif"><img src="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/01-04-network_security/vpn_two-sites.gif" alt=""></a></p>
+</li>
+<li>
+<p><strong>Site-to-Site VPN (Intranet):</strong> Bei besonders sensiblen Daten kann eine VPN Verbindung zweier Abteilungen über das Intranet  geschützt werden. (Bsp. HR-Daten und Finanzabteilung)</p>
+</li>
+</ul>
+<h1 id="wireless-security">Wireless Security</h1>
+<h3 id="beispiele-für-angreifbare-wireless-technologien">Beispiele für angreifbare Wireless Technologien:</h3>
+<ul>
+<li>Wifi</li>
+<li>Bluetooth</li>
+<li>NFC</li>
+<li>etc.</li>
+</ul>
+<h3 id="vorschläge-für-wireless-security">Vorschläge für Wireless Security</h3>
+<blockquote>
+<ol>
+<li>Außer Haus: Wifi ausschalten</li>
+<li>Alte Netzwerke löschen</li>
+<li>Verwenden uninteressanter WiFi SSID-Namen</li>
+<li>“Wired to WiFi broadcasts” abschalten</li>
+<li>Ausschließliche Verwendung von 5GHz</li>
+<li>Verwendung von kabelgebundenen Kameras</li>
+<li>Bluetooth-Geräte zu Hause verbinden</li>
+<li>(NFC)-Karten sicher verstauen</li>
+<li>Arbeits- und Identifikationskarten versteckt halten</li>
+</ol>
+</blockquote>
+<h2 id="datencenter-sicherheit">Datencenter Sicherheit</h2>
+<ul>
+<li>
+<p><strong>Netzwerk Firewall:</strong> Beobachtet und filtert Netzwerk Traffic auf basis benutzerdefinierter Regeln. Soll böswillige Zugriffe auf Server verhindern und nur legitimen Traffic zulassen.</p>
+<ul>
+<li><strong>Stateless Firewall:</strong> Überprüft isoliert einzelne Pakete und lässt diese auf Basis des Headers zu oder nicht.</li>
+<li><strong>Stateful Firewall:</strong> Bestimmen den Verbindungsstatus von Paketen und können verwandte Pakete sammeln. Die Regeln werden auf den Datenverkehr angewendet.</li>
+<li><strong>Anwendungsfirewall (Proxy-Based Firewall):</strong> Analysieren die übertragenen Daten und Regeln können für einzelne Dienste / Anwendungen spezifisch angewendet werden.</li>
+</ul>
+</li>
+<li>
+<p><strong>Firewall Regeln (Beispiel):</strong> <code>FROM</code> <em>source</em> <code>TO</code> <em>destination</em> <code>ALLOW|BLOCK</code> <em>protocol</em> <code>PORT</code>   <em>port(s)</em></p>
+</li>
+<li>
+<p><strong>DMZ (DeMilitarized Zone):</strong> Teilnetz, welches Zugriff auf öffentliche Dienste hat und gleichzeitig interne Netze erreichen kann. Dieser Bereich ist mit einer Firewall durch den Angriff aus dem öffentlichen Netz geschützt und durch eine weitere Firewall vom internen Netz getrennt.</p>
+</li>
+<li>
+<p><strong>IDS (Intrusion Detection System):</strong> <em>[Einbruchserkennungssystem]</em> Überwacht ein Netzwerk oder System auf böswillige Aktivitäten und meldet diese.</p>
+</li>
+<li>
+<p><strong>IPS (Intrusion Prevention System):</strong> <em>[Einbruchsverhinderungssystem]</em> Erweitert das IDS durch die Überwachung von Netzwerk Traffic und Systemaktivitäten und kann den erkannten Einbruch aktiv verhindern bzw. blockieren.</p>
+</li>
+<li>
+<p><strong>Einschränkungen:</strong></p>
+<ul>
+<li>Hohe Anzahl von Fehlalarmen sorgt für das Ignorieren oder Übersehen von realen Angriffen</li>
+<li>Kann keine Netzwerkschwächen kompensieren</li>
+<li>Verschlüsselte Pakete werden nicht durch IDS verarbeitet</li>
+</ul>
+</li>
+<li>
+<p><strong>NIDS (Network IDS):</strong> Anwendung eines IDS im Netzwerk</p>
+</li>
+<li>
+<p><strong>HIDS (Host IDS):</strong> Anwendung und Überwachung auf einem einzelnen Host. Hierbei werden Systemdaten mit vorherigen zuständen beobachtet und Änderungen von kritischen Systemdaten gemeldet.</p>
+</li>
+</ul>
+<h1 id="sicherheitsmanagement-und-organisation">Sicherheitsmanagement und Organisation</h1>
+<h2 id="jobtitel-und--beschreibungen">Jobtitel und -beschreibungen</h2>
+<ul>
+<li>
+<p><strong>Security Analyst:</strong> Analyse und Bewertugen von Schwachstellen in der Infrastruktur (Software, Hardware, Netzwerk). Anschließende Empfehlung von Best Pracises und Lösungen.</p>
+</li>
+<li>
+<p><strong>Security Engineer:</strong> Analyse von Daten und Protokollen zur Sicherheitsüberwachung.</p>
+</li>
+<li>
+<p><strong>Security Architect:</strong> Entwirft das Sicherheitssystem</p>
+</li>
+<li>
+<p><strong>Security Administrator:</strong> Installiert und verwaltet Sicherheitssysteme der Organisation</p>
+</li>
+<li>
+<p><strong>Security Software Developer:</strong> Implementiert Sicherheit in Anwendungssoftware und entwickelt Sicherheitssoftware und -tools.</p>
+</li>
+<li>
+<p><strong>Chief Information Security Officer:</strong> Führungsposition mit Verantwortung für die gesamte Abteilung.</p>
+</li>
+<li>
+<p><strong>Penetration Tester:</strong> Sucht nach Schwachstellen, identifiziert sie und nutzt sie aus (als Nachweis).</p>
+</li>
+<li>
+<p><strong>Cyber Incident Response Team (CIRT):</strong> Gruppe, die für die Reaktionen auf Sicherheitsverletzungen, Viren und Sicherheitsvorfälle zuständig ist.</p>
+<ul>
+<li><strong>1. Vorbereitung:</strong> Reaktionsplan / -strategie</li>
+<li><strong>2. Identifizierung:</strong> Schadenserkennung</li>
+<li><strong>3. Eindämmung:</strong> Verhinderung weiterer Schäden</li>
+<li><strong>4. Ausrottung:</strong> Beseitigung der Bedrohung und zurücksetzen der Systeme</li>
+<li><strong>5. Widerherstellung:</strong> Testen, Überwachen,  Validieren und Inbetriebnahme</li>
+<li><strong>6. Lessons Learned:</strong> Aus Angriff lernen und Sicherheitssystem verbessern</li>
+</ul>
+</li>
+</ul>
+<h1 id="security-awareness">Security Awareness</h1>
+<ul>
+<li>Schulungsprogramme für Mitarbeiter</li>
+<li>Individuelle Verantwortung für Sicherheitsrechtlinien des Unternehmens</li>
+<li>Maßnahmen zur Prüfung (Audits)</li>
+</ul>
+<h3 id="schritte-von-security-awareness">Schritte von Security Awareness</h3>
+<ol>
+<li>Aktuellen Zustand ermitteln</li>
+<li>Security Awareness Programm ermitteln</li>
+<li>Bereitstellung des Programms für Mitarbeiter</li>
+<li>Messung der Fortschritte und ggf. Überarbeitung des Programms</li>
+</ol>
+<h1 id="threat-modeling">Threat Modeling</h1>
+<ul>
+<li>Identifizierung und Priorisierung potenzieller Bedrohungen und Schwachstellen aus der Sicht eines hypothetischen Angreifers</li>
+<li>Zweck: Systematische Analyse des Profils eines Angreifers und Ermittlung des wahrscheinlichsten Angriffspunkts - zum Nutzen der Verteidiger</li>
+</ul>
+<h3 id="gründe-für-die-bedrohungsmodellierung">Gründe für die Bedrohungsmodellierung</h3>
+<ul>
+<li>Sicherheitslücken frühzeitig finden</li>
+<li>Verstehen der eigenen Sicherheitsanforderungen</li>
+<li>Entwicklung und Lieferung besserer Produkte</li>
+<li>Behebung von Problemen, die nicht durch anderen Technologien behoben werden (können)</li>
+</ul>
+<h2 id="angriffsbäume">Angriffsbäume</h2>
+<ul>
+<li>Darstellung von Angriffen eines Systems durch eine Baumstruktur</li>
+<li>Das Ziel wird als Wurzelknoten dargestellt</li>
+<li>Angriffsmöglichkeiten werden als Blätter dargestellt</li>
+<li>Angriffsmöglichkeiten können durch <code>AND</code> verbunden werden</li>
+<li>Blätter werden durch <code>I (Impossible)</code> oder <code>P (Possible)</code> gekennzeichnet</li>
+<li>Potentielle Angriffswege werden durch gestrichelte Linien dargestellt</li>
+</ul>
+<p><a href="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/01-07-threat_modeling/paper-attacktrees-fig2.gif"><img src="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/01-07-threat_modeling/paper-attacktrees-fig2.gif" alt="Attack Tree"></a></p>
+<h2 id="trust-boundaries-vertrauensgrenzen">Trust Boundaries (Vertrauensgrenzen)</h2>
+<ul>
+<li>Bedrohungen, die Vertrauensgrenzen überschreiten sind relevante Bedrohungen</li>
+</ul>
+<h1 id="todo---continue">TODO - continue</h1>
 <hr>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
@@ -197,7 +350,10 @@
 <h3 id="owasp-top-10"><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></h3>
 </li>
 <li>
-<h3 id="template"><a href="https://www.google.com">template</a></h3>
+<h3 id="wireshark"><a href="https://www.wireshark.org">Wireshark</a></h3>
+</li>
+<li>
+<h3 id="wigle"><a href="https://www.wigle.net/">WiGLE</a></h3>
 </li>
 </ul>
 </div>
