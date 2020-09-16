@@ -10,13 +10,12 @@
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-02-security_goals.md">Sicherheitsziele</a>  (Confidentiality, Integrity, Availability)</li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-03-malware.md">Malware</a>  (Viren, Würmer, Trojaner, Botnets, Ransomware, Cryptojackers)</li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-04-network_security.md">Netzwerksicherheit</a>  (VPN, Wireless Security, Firewalls/IDS/IPS/WAF)</li>
-<li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-05-encryption.md">Verschlüsselung</a>  (WEP/WPA2, SSL/TLS, PGP, Disk Encryption)</li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-06-security_mgmt_and_org.md">Sicherheitsmanagement und -rorganisation</a></li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-07-threat_modeling.md">Threat Modeling</a></li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/01-08-penetration_testing.md">Penetration Testing</a></li>
 </ol>
-<h3 id="semester-2---anwendungssicherheit-und-systementwicklungslebenszyklus"><a href="https://github.com/LeonStoldt/it-security-lecture#semester-2---application-security--sdlc"></a>Semester 2 - Anwendungssicherheit und Systementwicklungslebenszyklus</h3>
-<ol>
+<h3 id="semester-2---anwendungssicherheit-und-systementwicklungslebenszyklus">Semester 2 - Anwendungssicherheit und Systementwicklungslebenszyklus</h3>
+<ol start="8">
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-01-owasp.md">Open Web Application Security Project</a>  (OWASP)</li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-02-xss.md">Cross-Site Scripting (XSS)</a></li>
 <li><a href="https://github.com/LeonStoldt/it-security-lecture/blob/master/slides/02-03-injection.md">Injection</a></li>
@@ -43,7 +42,7 @@
 <li>Blackhats + Betrüger / Krmininelle</li>
 <li>Blackhats + Skriptkiddis</li>
 </ul>
-<h1 id="security-ziele">2. Security Ziele</h1>
+<h1 id="sicherheitsziele">2. Sicherheitsziele</h1>
 <ul>
 <li><strong>Nichtveränderbarkeit</strong></li>
 <li><strong>Nachvollziehbarkeit</strong></li>
@@ -116,7 +115,7 @@
 <td align="left">Rechteprüfung, Notfallübung, Sensibilisierungstraining</td>
 </tr>
 </tbody>
-</table><h1 id="malware">Malware</h1>
+</table><h1 id="malware">3. Malware</h1>
 <h2 id="kategorien">Kategorien</h2>
 <ul>
 <li>
@@ -171,7 +170,7 @@
 <li>Starke Passwörter benutzen</li>
 <li>Passwort Manager verwenden</li>
 </ol>
-<h1 id="network-security">Network Security</h1>
+<h1 id="netzwerksicherheit">4. Netzwerksicherheit</h1>
 <h2 id="osi-model">OSI-Model</h2>
 <p>Siehe <a href="https://leonstoldt.github.io/technische-Grundlagen-der-Informatik/page">Technische Grundlagen der Informatik</a></p>
 <h2 id="vpn-virtual-private-network">VPN (Virtual Private Network)</h2>
@@ -193,7 +192,7 @@
 <p><strong>Site-to-Site VPN (Intranet):</strong> Bei besonders sensiblen Daten kann eine VPN Verbindung zweier Abteilungen über das Intranet  geschützt werden. (Bsp. HR-Daten und Finanzabteilung)</p>
 </li>
 </ul>
-<h1 id="wireless-security">Wireless Security</h1>
+<h2 id="wireless-security">Wireless Security</h2>
 <h3 id="beispiele-für-angreifbare-wireless-technologien">Beispiele für angreifbare Wireless Technologien:</h3>
 <ul>
 <li>Wifi</li>
@@ -252,7 +251,7 @@
 <p><strong>HIDS (Host IDS):</strong> Anwendung und Überwachung auf einem einzelnen Host. Hierbei werden Systemdaten mit vorherigen zuständen beobachtet und Änderungen von kritischen Systemdaten gemeldet.</p>
 </li>
 </ul>
-<h1 id="sicherheitsmanagement-und-organisation">Sicherheitsmanagement und Organisation</h1>
+<h1 id="sicherheitsmanagement-und-organisation">5. Sicherheitsmanagement und Organisation</h1>
 <h2 id="jobtitel-und--beschreibungen">Jobtitel und -beschreibungen</h2>
 <ul>
 <li>
@@ -288,7 +287,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="security-awareness">Security Awareness</h1>
+<h2 id="security-awareness">Security Awareness</h2>
 <ul>
 <li>Schulungsprogramme für Mitarbeiter</li>
 <li>Individuelle Verantwortung für Sicherheitsrechtlinien des Unternehmens</li>
@@ -301,7 +300,7 @@
 <li>Bereitstellung des Programms für Mitarbeiter</li>
 <li>Messung der Fortschritte und ggf. Überarbeitung des Programms</li>
 </ol>
-<h1 id="threat-modeling">Threat Modeling</h1>
+<h1 id="threat-modeling">6. Threat Modeling</h1>
 <ul>
 <li>Identifizierung und Priorisierung potenzieller Bedrohungen und Schwachstellen aus der Sicht eines hypothetischen Angreifers</li>
 <li>Zweck: Systematische Analyse des Profils eines Angreifers und Ermittlung des wahrscheinlichsten Angriffspunkts - zum Nutzen der Verteidiger</li>
@@ -327,9 +326,102 @@
 <ul>
 <li>Bedrohungen, die Vertrauensgrenzen überschreiten sind relevante Bedrohungen</li>
 </ul>
-<h1 id="todo---continue">TODO - continue</h1>
-<hr>
-<h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
+<h1 id="penetration-testing">7. Penetration Testing</h1>
+<p>Versuch einer Bewertung der Sicherheit von IT-Infrastruktur durch kontrolliertes Angreifen, Identifizieren und Ausnutzen von Sicherheitslücken</p>
+<h3 id="phasen-von-pen-tests">Phasen von Pen-Tests</h3>
+<p><strong>1. Interaktionen vor dem Pen-Test</strong><br>
+-	Absprache des Umfangs und Vertragsregelungen<br>
+-	Rahmenbedingungen<br>
+-	Notfallkontakt Informationen<br>
+<strong>2. Informationen sammeln</strong><br>
+<strong>3. Threat Modeling</strong><br>
+<strong>4. Schwachstellenanalyse</strong><br>
+-	automatisierte Anwendungsscans<br>
+-	Netzwerkscans<br>
+-	Traffic / Metadaten Analyse<br>
+<strong>5. Exploitation / Ausnutzung</strong><br>
+-	Vermeiden von Gegenmaßnahmen<br>
+-	Unerkannt bleiben<br>
+-	Durchführung angepasster Exploits<br>
+<strong>6. Nachnutzung der Schwachstelle</strong><br>
+-	Infrastruktur-Analyse<br>
+-	Plünderung z.B. von Informationen<br>
+-	Installation einer Backdoor<br>
+-	Aufräumen der Spuren<br>
+<strong>7. Berichterstattung</strong><br>
+-	Zusammenfassung (allgemeiner Bericht)<br>
+-	Technischer Bericht (technische Details, Angriffspfad und Korrekturvorschläge)</p>
+<h2 id="bug-bounty-programme">Bug Bounty Programme</h2>
+<p>Einzelpersonen erhalten für das Melden von Fehlern (Bugs) eine Belohnung.</p>
+<h2 id="web-security-policies-security.txt">Web Security Policies <code>Security.txt</code></h2>
+<p>Ein Dokument, welches den Prozess zum Aufdecken / Melden von Sicherheitslücken beschreibt.</p>
+<h3 id="inhalt">Inhalt:</h3>
+<ul>
+<li><strong>Kontakt</strong>: Adresse, an die der Fehler gemeldet werden soll</li>
+<li><strong>Verschlüsselung</strong>: Verschlüsselungsschlüssel für die Kommunikation</li>
+<li><strong>Danksagung</strong>: Link zur Anerkennungsseite der gemeldeten Fehler<br>
+. <strong>Berechtigung</strong>: Beschreibung der Berechtigungen des Testens auf der Seite</li>
+<li><strong>Richtlinie</strong>: Link zur Sicherheitsrichtlinie</li>
+<li><strong>Signatur</strong>: Link einer externen Signaturdatei zur Authentifizierung der security.txt</li>
+</ul>
+<ul>
+<li><strong>Anstellung</strong>: Verknüpfung zu den sicherheitsrelevanten Stellen des Anbieters</li>
+</ul>
+<h1 id="owasp">8. OWASP</h1>
+<blockquote>
+<h2 id="open-web-application-security-project">Open Web Application Security Project</h2>
+</blockquote>
+<h2 id="grundwerte">Grundwerte</h2>
+<ul>
+<li><strong>OFFEN:</strong> Hohe Transparenz von allem</li>
+<li><strong>INNOVATION:</strong> Unterstützung von Innovation und Experimenten zur Lösung von Sicherheitsherausforderungen</li>
+<li><strong>GLOBAL:</strong> Keine Beschränkung auf Länder / Kontinente</li>
+<li><strong>INTEGRITÄT:</strong> Ehrliche und Herstellerneutrale Gemeinschaft</li>
+</ul>
+<h2 id="owasp-top-10">OWASP Top 10</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">Injection</td>
+<td align="left">6</td>
+<td align="left">Security Misconfiguration</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Broken Authentication</td>
+<td align="left">7</td>
+<td align="left">Cross-Site-Scripting (XSS)</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Sensitive Data Exposure</td>
+<td align="left">8</td>
+<td align="left">Insecure Deserialization</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">XML External Entities</td>
+<td align="left">9</td>
+<td align="left">Using Components with Known Vulnerabilities</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Broken Access Control</td>
+<td align="left">10</td>
+<td align="left">Insufficient Logging &amp; Monitoring</td>
+</tr>
+</tbody>
+</table><h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
 <li>
 <h3 id="virustotal"><a href="https://www.virustotal.com/">Virustotal</a></h3>
@@ -338,10 +430,10 @@
 <h3 id="haveibeenpwned"><a href="https://haveibeenpwned.com/">HaveIBeenPwned</a></h3>
 </li>
 <li>
-<h3 id="owasp"><a href="https://owasp.org/">OWASP</a></h3>
+<h3 id="owasp-1"><a href="https://owasp.org/">OWASP</a></h3>
 </li>
 <li>
-<h3 id="owasp-top-10"><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></h3>
+<h3 id="owasp-top-10-1"><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></h3>
 </li>
 <li>
 <h3 id="wireshark"><a href="https://www.wireshark.org">Wireshark</a></h3>
@@ -349,5 +441,43 @@
 <li>
 <h3 id="wigle"><a href="https://www.wigle.net/">WiGLE</a></h3>
 </li>
+<li>
+<h3 id="awesome-list-pen-test"><a href="https://github.com/enaqx/awesome-pentest">Awesome List Pen-Test</a></h3>
+</li>
+<li>
+<h3 id="bug-bounty-programme-1"><a href="https://hackerone.com/bug-bounty-programs">Bug Bounty Programme</a></h3>
+</li>
+<li>
+<h3 id="google---project-zero"><a href="https://googleprojectzero.blogspot.com/">Google - Project Zero</a></h3>
+</li>
+<li>
+<h3 id="awesome-list-web-security"><a href="https://github.com/qazbnm456/awesome-web-security">Awesome List Web-Security</a></h3>
+</li>
+<li>
+<h3 id="owasp-2"><a href="https://www.owasp.org">OWASP</a></h3>
+</li>
 </ul>
+<h3 id="owasp-projects"><a href="https://www.owasp.org/index.php/Category:OWASP_Project">OWASP Projects</a></h3>
 
+<table>
+<thead>
+<tr>
+<th align="left">Projekt</th>
+<th align="left">Beispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Tool</td>
+<td align="left"><a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">Zed Attack Proxy</a>, <a href="https://www.owasp.org/index.php/OWASP_Dependency_Check">Dependency Check</a>, <a href="https://www.owasp.org/index.php/OWASP_DefectDojo_Project">DefectDojo</a>, <a href="https://owasp-juice.shop">Juice Shop</a></td>
+</tr>
+<tr>
+<td align="left">Code</td>
+<td align="left"><a href="https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project">ModSecurity Core Rule Set</a>, <a href="https://www.owasp.org/index.php/OWASP_Java_HTML_Sanitizer">Java HTML Sanitizer</a>, <a href="https://www.owasp.org/index.php/OWASP_Security_Logging_Project">Security Logging Project</a>, <a href="https://www.owasp.org/index.php/OWASP_AppSensor_Project">AppSensor</a></td>
+</tr>
+<tr>
+<td align="left">Documentation</td>
+<td align="left"><a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10</a>, <a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project">Application Security Verification Standard (ASVS)</a>, <a href="https://www.owasp.org/index.php/OWASP_Podcast">OWASP 24/7 Podcast</a>, <a href="https://www.owasp.org/index.php/OWASP_Cornucopia">Cornucopia</a></td>
+</tr>
+</tbody>
+</table>
