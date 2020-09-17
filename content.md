@@ -421,7 +421,91 @@
 <td align="left">Insufficient Logging &amp; Monitoring</td>
 </tr>
 </tbody>
-</table><h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
+</table><h1 id="cross-site-scripting-xss">Cross-Site-Scripting (XSS)</h1>
+<ul>
+<li>XSS sendet ein bösartiges Skript an einen Ahnungslosen Anwender</li>
+<li>Das Skript wird vom Browser nicht erkannt und ausgeführt</li>
+</ul>
+<h3 id="auswirkungen">Auswirkungen</h3>
+<ul>
+<li>Stehlen der Session des Nutzers</li>
+<li>Stehlen von sensiblen Daten</li>
+<li>Neuschreiben der Website</li>
+<li>Weiterleiten der Nutzer auf eine schädliche Website</li>
+</ul>
+<h3 id="bewertung">Bewertung</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Einfach</td>
+<td align="left">weit verbreitet</td>
+<td align="left">Einfach</td>
+<td align="left">mittelschwer</td>
+</tr>
+</tbody>
+</table><h3 id="formen-von-xss">Formen von XSS</h3>
+<ul>
+<li>
+<p><strong>Reflected XSS:</strong></p>
+<ul>
+<li>Anwendung liefert den erhaltenen HTTP-Request direkt wieder aus</li>
+<li>Auswertung auf dem Server<br>
+<a href="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/02-02-xss/reflected-xss.png"><img src="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/02-02-xss/reflected-xss.png" alt="Reflected XSS"></a></li>
+</ul>
+</li>
+<li>
+<p><strong>Stored XSS:</strong></p>
+<ul>
+<li>Angreifer führt zuerst einen Request durch und speichert das XSS</li>
+<li>Bsp. Kommentare / Reviews<br>
+<a href="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/stored-xss.png"><img src="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/stored-xss.png" alt="Reflected XSS"></a><br>
+viewed at a later time by another user</li>
+</ul>
+</li>
+<li>
+<p><strong>DOM XSS:</strong></p>
+<ul>
+<li>Statisches HTML</li>
+<li>XSS wird nur im DOM ausgewertet, nicht auf dem Server<br>
+<a href="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/dom-xss.png"><img src="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/dom-xss.png" alt="Reflected XSS"></a></li>
+</ul>
+</li>
+</ul>
+<h3 id="prävention">Prävention</h3>
+<ul>
+<li>keinen Userinput als Ausgabe anzeigen</li>
+<li>Userinput codieren</li>
+<li>Eingabeüberprüfung per Whitelist oder Verwendung eines HTML Sanitizers</li>
+</ul>
+<h3 id="eingabevalidierung">Eingabevalidierung</h3>
+<p><strong>Black List:</strong></p>
+<ul>
+<li>Alles erlauben, was nicht explizit verboten ist</li>
+<li>kann durch maskieren von Zeichen umgangen werden</li>
+<li>muss aktualisiert werden</li>
+</ul>
+<p><strong>White List:</strong></p>
+<ul>
+<li>Alles verbieten, was nicht explizit erlaubt ist</li>
+<li>muss mit der Zeit gewartet werden, um nicht schlechter zu werden</li>
+<li>mühsamer, aber kann sicherer sein</li>
+</ul>
+<h3 id="umgehen-client-seitiger-validierung">Umgehen Client-seitiger Validierung</h3>
+<ul>
+<li>Client Side Validation bietet keine Sicherheit!</li>
+<li>ausgehende HTTP-Anfragen können manipuliert werden</li>
+<li>direkte Interaktion mit dem Backend</li>
+</ul>
+<h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
 <li>
 <h3 id="virustotal"><a href="https://www.virustotal.com/">Virustotal</a></h3>
