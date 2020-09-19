@@ -511,7 +511,7 @@ viewed at a later time by another user</li>
 <table>
 <thead>
 <tr>
-<th align="left">AUsnutzbarkeit</th>
+<th align="left">Ausnutzbarkeit</th>
 <th align="left">Häufigkeit</th>
 <th align="left">Erkennbarkeit</th>
 <th align="left">Einfluss</th>
@@ -555,6 +555,79 @@ viewed at a later time by another user</li>
 <li>Eingabevalidierung per Whitelist</li>
 <li>DB User sollte möchlichst wenig Rechte haben</li>
 </ul>
+<!-- theme: default -->
+<!-- paginate: true -->
+<!-- footer: Copyright (c) by **Bjoern Kimminich** | Licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) -->
+<h1 id="authentication-flaws">Authentication Flaws</h1>
+<hr>
+<h1 id="authentifizierungsfehler">Authentifizierungsfehler</h1>
+<ul>
+<li>Brute-Force oder automatisierte Angriffe</li>
+<li>schwache, bekannte oder übliche Passwörter</li>
+<li>schlechte Prozesse zur Wiederherstellung von Anmeldeinformationen (Bsp. Passwort vergessen)</li>
+<li>schlecht oder gar nicht verschlüsselte Passwörter</li>
+<li>keine MFA</li>
+<li>Session IDs in URL</li>
+<li>schlechtes Session Management</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Einfach</td>
+<td align="left">verbreitet</td>
+<td align="left">Mittelmäßig</td>
+<td align="left">Schwer</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-2">Prävention</h2>
+<ul>
+<li>Verwendung einzigartiger und Case-Insensitiver  User IDs</li>
+<li>Validiere E-Mail Adressen, wenn diese als Nutzername verwendet werden</li>
+<li>Verwendung starker Passwörter (mind. 10 Zeichen)</li>
+<li>keine regelmäßigen Passwortänderungen erzwingen</li>
+<li>Vermeiden von Regeln zur Passworterstellung</li>
+<li>Bekannte oder schlechte Passwörter nicht zulassen</li>
+<li>Passwörter nur über TLS senden</li>
+<li>Brute-Force Attacken verhindern (z.B. durch Wartezeit, maximale Versuche etc.)</li>
+</ul>
+<h4 id="sicherer-passwort-wiederherstellungsprozess">Sicherer Passwort-Wiederherstellungsprozess</h4>
+<ol>
+<li>Sammeln von Identitätsdaten oder Sicherheitsfragen</li>
+<li>Verifizieren der Sicherheitsfragen</li>
+<li>Konto sofort sperren</li>
+<li>Token über einen anderen Kanal senden</li>
+<li>Nutzer das Passwort ändern lassen</li>
+<li>Protokollieren</li>
+</ol>
+<h2 id="zwei-faktor-authentifizierung">Zwei-Faktor-Authentifizierung</h2>
+<ul>
+<li>zusätzlicher Faktor zur Authentifizierung</li>
+<li>Bsp:
+<ul>
+<li>SMS</li>
+<li>Authenticator App</li>
+<li>Hardware Key</li>
+</ul>
+</li>
+</ul>
+<h2 id="passwort-manager">Passwort Manager</h2>
+<p>Passwort Manager verwalten beliebig viele Nutzerdaten und bieten den Zugriff über ein Master-Passwort. Hierdurch können einzigartige und komplexe Passwörter generiert werden.<br>
+Beispiele</p>
+<ul>
+<li><a href="https://keepass.info/">KeePass</a></li>
+<li><a href="https://www.lastpass.com">LastPass</a></li>
+<li><a href="https://1password.com/">1Password</a></li>
+</ul>
+<hr>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
 <li>
@@ -589,6 +662,9 @@ viewed at a later time by another user</li>
 </li>
 <li>
 <h3 id="owasp-2"><a href="https://www.owasp.org">OWASP</a></h3>
+</li>
+<li>
+<h3 id="twofactorauth.org"><a href="https://twofactorauth.org/">TwoFactorAuth.org</a></h3>
 </li>
 </ul>
 <h3 id="owasp-projects"><a href="https://www.owasp.org/index.php/Category:OWASP_Project">OWASP Projects</a></h3>
