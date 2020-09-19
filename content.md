@@ -433,7 +433,7 @@
 <li>Neuschreiben der Website</li>
 <li>Weiterleiten der Nutzer auf eine schädliche Website</li>
 </ul>
-<h3 id="bewertung">Bewertung</h3>
+<h2 id="risikobewertung">Risikobewertung</h2>
 
 <table>
 <thead>
@@ -507,6 +507,7 @@ viewed at a later time by another user</li>
 </ul>
 <h1 id="injection">Injection</h1>
 <p>Eine Anwendung dazu bringen ungewollte Befehle einzubinden und durch den Interpreter anschließend ausführen zu lassen.</p>
+<h2 id="risikobewertung-1">Risikobewertung</h2>
 
 <table>
 <thead>
@@ -555,11 +556,6 @@ viewed at a later time by another user</li>
 <li>Eingabevalidierung per Whitelist</li>
 <li>DB User sollte möchlichst wenig Rechte haben</li>
 </ul>
-<!-- theme: default -->
-<!-- paginate: true -->
-<!-- footer: Copyright (c) by **Bjoern Kimminich** | Licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) -->
-<h1 id="authentication-flaws">Authentication Flaws</h1>
-<hr>
 <h1 id="authentifizierungsfehler">Authentifizierungsfehler</h1>
 <ul>
 <li>Brute-Force oder automatisierte Angriffe</li>
@@ -570,6 +566,7 @@ viewed at a later time by another user</li>
 <li>Session IDs in URL</li>
 <li>schlechtes Session Management</li>
 </ul>
+<h2 id="risikobewertung-2">Risikobewertung</h2>
 
 <table>
 <thead>
@@ -626,6 +623,50 @@ Beispiele</p>
 <li><a href="https://keepass.info/">KeePass</a></li>
 <li><a href="https://www.lastpass.com">LastPass</a></li>
 <li><a href="https://1password.com/">1Password</a></li>
+</ul>
+<h1 id="authorisierungsfehler">Authorisierungsfehler</h1>
+<ul>
+<li>Zugreifen auf nicht autorisierte Funktionen oder Daten</li>
+<li>Anzeigen vertraulicher Daten</li>
+<li>Änderung von Daten anderer Nutzer</li>
+<li>Änderung von Zugriffsrechten</li>
+</ul>
+<h3 id="übliche-angriffszenarien">Übliche Angriffszenarien</h3>
+<ul>
+<li>Manipulation der URL oder der Seite</li>
+<li>Änderung des Primärschlüssels anderer Nutzereinträge</li>
+<li>Erhöhen der eigenen Rechte</li>
+<li>Als Admin ausgeben</li>
+<li>Verwendung der API ohne Berechtigungen</li>
+</ul>
+<h2 id="risikobewertung-3">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mittelmäßig</td>
+<td align="left">verbreitet</td>
+<td align="left">Mittelmäßig</td>
+<td align="left">Schwer</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-3">Prävention</h2>
+<ul>
+<li>vertrauenswürdige, serverseitige Zugriffskontrolle</li>
+<li>Einmal Zugriffskontrollmechanismen entwickeln und überall verwenden</li>
+<li>Verzeichnisliste des Webservers deaktivieren</li>
+<li>Fehler bei der Zugriffskontrolle protokollieren und ggf. melden</li>
+<li>Zugriffsversuche der API beschränken</li>
+<li>ungültige Zugriffstoken nach Abmeldung</li>
+<li>Zugriffskontrolle durch Unit-, Integrationtest und QA sichern</li>
 </ul>
 <hr>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
