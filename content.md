@@ -42,6 +42,7 @@
 <li>Blackhats + Betrüger / Krmininelle</li>
 <li>Blackhats + Skriptkiddis</li>
 </ul>
+<hr>
 <h1 id="sicherheitsziele">2. Sicherheitsziele</h1>
 <ul>
 <li><strong>Nichtveränderbarkeit</strong></li>
@@ -115,7 +116,8 @@
 <td align="left">Rechteprüfung, Notfallübung, Sensibilisierungstraining</td>
 </tr>
 </tbody>
-</table><h1 id="malware">3. Malware</h1>
+</table><hr>
+<h1 id="malware">3. Malware</h1>
 <h2 id="kategorien">Kategorien</h2>
 <ul>
 <li>
@@ -170,6 +172,7 @@
 <li>Starke Passwörter benutzen</li>
 <li>Passwort Manager verwenden</li>
 </ol>
+<hr>
 <h1 id="netzwerksicherheit">4. Netzwerksicherheit</h1>
 <h2 id="osi-model">OSI-Model</h2>
 <p>Siehe <a href="https://leonstoldt.github.io/technische-Grundlagen-der-Informatik/page">Technische Grundlagen der Informatik</a></p>
@@ -251,6 +254,7 @@
 <p><strong>HIDS (Host IDS):</strong> Anwendung und Überwachung auf einem einzelnen Host. Hierbei werden Systemdaten mit vorherigen zuständen beobachtet und Änderungen von kritischen Systemdaten gemeldet.</p>
 </li>
 </ul>
+<hr>
 <h1 id="sicherheitsmanagement-und-organisation">5. Sicherheitsmanagement und Organisation</h1>
 <h2 id="jobtitel-und--beschreibungen">Jobtitel und -beschreibungen</h2>
 <ul>
@@ -300,6 +304,7 @@
 <li>Bereitstellung des Programms für Mitarbeiter</li>
 <li>Messung der Fortschritte und ggf. Überarbeitung des Programms</li>
 </ol>
+<hr>
 <h1 id="threat-modeling">6. Threat Modeling</h1>
 <ul>
 <li>Identifizierung und Priorisierung potenzieller Bedrohungen und Schwachstellen aus der Sicht eines hypothetischen Angreifers</li>
@@ -326,6 +331,7 @@
 <ul>
 <li>Bedrohungen, die Vertrauensgrenzen überschreiten sind relevante Bedrohungen</li>
 </ul>
+<hr>
 <h1 id="penetration-testing">7. Penetration Testing</h1>
 <p>Versuch einer Bewertung der Sicherheit von IT-Infrastruktur durch kontrolliertes Angreifen, Identifizieren und Ausnutzen von Sicherheitslücken</p>
 <h3 id="phasen-von-pen-tests">Phasen von Pen-Tests</h3>
@@ -367,6 +373,7 @@
 <ul>
 <li><strong>Anstellung</strong>: Verknüpfung zu den sicherheitsrelevanten Stellen des Anbieters</li>
 </ul>
+<hr>
 <h1 id="owasp">8. OWASP</h1>
 <blockquote>
 <h2 id="open-web-application-security-project">Open Web Application Security Project</h2>
@@ -421,7 +428,8 @@
 <td align="left">Insufficient Logging &amp; Monitoring</td>
 </tr>
 </tbody>
-</table><h1 id="cross-site-scripting-xss">Cross-Site-Scripting (XSS)</h1>
+</table><hr>
+<h1 id="cross-site-scripting-xss">9. Cross-Site-Scripting (XSS)</h1>
 <ul>
 <li>XSS sendet ein bösartiges Skript an einen Ahnungslosen Anwender</li>
 <li>Das Skript wird vom Browser nicht erkannt und ausgeführt</li>
@@ -505,7 +513,8 @@ viewed at a later time by another user</li>
 <li>ausgehende HTTP-Anfragen können manipuliert werden</li>
 <li>direkte Interaktion mit dem Backend</li>
 </ul>
-<h1 id="injection">Injection</h1>
+<hr>
+<h1 id="injection">10. Injection</h1>
 <p>Eine Anwendung dazu bringen ungewollte Befehle einzubinden und durch den Interpreter anschließend ausführen zu lassen.</p>
 <h2 id="risikobewertung-1">Risikobewertung</h2>
 
@@ -556,7 +565,8 @@ viewed at a later time by another user</li>
 <li>Eingabevalidierung per Whitelist</li>
 <li>DB User sollte möchlichst wenig Rechte haben</li>
 </ul>
-<h1 id="authentifizierungsfehler">Authentifizierungsfehler</h1>
+<hr>
+<h1 id="authentifizierungsfehler">11. Authentifizierungsfehler</h1>
 <ul>
 <li>Brute-Force oder automatisierte Angriffe</li>
 <li>schwache, bekannte oder übliche Passwörter</li>
@@ -624,7 +634,8 @@ Beispiele</p>
 <li><a href="https://www.lastpass.com">LastPass</a></li>
 <li><a href="https://1password.com/">1Password</a></li>
 </ul>
-<h1 id="authorisierungsfehler">Authorisierungsfehler</h1>
+<hr>
+<h1 id="authorisierungsfehler">12. Authorisierungsfehler</h1>
 <ul>
 <li>Zugreifen auf nicht autorisierte Funktionen oder Daten</li>
 <li>Anzeigen vertraulicher Daten</li>
@@ -667,6 +678,59 @@ Beispiele</p>
 <li>Zugriffsversuche der API beschränken</li>
 <li>ungültige Zugriffstoken nach Abmeldung</li>
 <li>Zugriffskontrolle durch Unit-, Integrationtest und QA sichern</li>
+</ul>
+<hr>
+<h1 id="sensible-daten">13. Sensible Daten</h1>
+<ul>
+<li>Passwörter</li>
+<li>Kreditkartennummern</li>
+<li>Gesundheitsdaten</li>
+<li>Persönliche Informationen
+<ul>
+<li>Name und Vorname</li>
+<li>Adresse</li>
+<li>Email Adresse</li>
+<li>Personalausweisnummer</li>
+<li>Geodaten</li>
+<li>IP Adresse</li>
+<li>…</li>
+</ul>
+</li>
+<li>Geschäftsgeheimnisse</li>
+</ul>
+<h1 id="preisgabe-sensitiver-daten">Preisgabe sensitiver Daten</h1>
+<ul>
+<li>Fehler beim Ermitteln der Schutzanforderungen</li>
+<li>Übertragung im Klartext (Bsp. HTTP)</li>
+<li>Verwendung schwacher Verschlüsselung</li>
+<li>Keine Verschlüsselung durch den Browser</li>
+<li>Fehlende Zertifikatsprüfung</li>
+</ul>
+<h2 id="risikobewertung-4">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mittelmäßig</td>
+<td align="left">weit verbreitet</td>
+<td align="left">Mittelmäßig</td>
+<td align="left">Schwer</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-4">Prävention</h2>
+<ul>
+<li>Klassifizierung von Daten und deren Wichtigkeit</li>
+<li>sensible Daten nicht ohne wichtigen Grund speichern</li>
+<li>Einsatz aktueller Technologie (Algorithmen, Protokolle, Schlüssel)</li>
+<li>Sicherstellung eines guten Kryptografieschutzes, selbst wenn die Zugriffskontrolle umgangen werden sollte</li>
 </ul>
 <hr>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
