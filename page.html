@@ -48,6 +48,7 @@
 <li>Blackhats + Betrüger / Krmininelle</li>
 <li>Blackhats + Skriptkiddis</li>
 </ul>
+<hr>
 <h1 id="sicherheitsziele">2. Sicherheitsziele</h1>
 <ul>
 <li><strong>Nichtveränderbarkeit</strong></li>
@@ -121,7 +122,8 @@
 <td align="left">Rechteprüfung, Notfallübung, Sensibilisierungstraining</td>
 </tr>
 </tbody>
-</table><h1 id="malware">3. Malware</h1>
+</table><hr>
+<h1 id="malware">3. Malware</h1>
 <h2 id="kategorien">Kategorien</h2>
 <ul>
 <li>
@@ -176,6 +178,7 @@
 <li>Starke Passwörter benutzen</li>
 <li>Passwort Manager verwenden</li>
 </ol>
+<hr>
 <h1 id="netzwerksicherheit">4. Netzwerksicherheit</h1>
 <h2 id="osi-model">OSI-Model</h2>
 <p>Siehe <a href="https://leonstoldt.github.io/technische-Grundlagen-der-Informatik/page">Technische Grundlagen der Informatik</a></p>
@@ -257,6 +260,7 @@
 <p><strong>HIDS (Host IDS):</strong> Anwendung und Überwachung auf einem einzelnen Host. Hierbei werden Systemdaten mit vorherigen zuständen beobachtet und Änderungen von kritischen Systemdaten gemeldet.</p>
 </li>
 </ul>
+<hr>
 <h1 id="sicherheitsmanagement-und-organisation">5. Sicherheitsmanagement und Organisation</h1>
 <h2 id="jobtitel-und--beschreibungen">Jobtitel und -beschreibungen</h2>
 <ul>
@@ -306,6 +310,7 @@
 <li>Bereitstellung des Programms für Mitarbeiter</li>
 <li>Messung der Fortschritte und ggf. Überarbeitung des Programms</li>
 </ol>
+<hr>
 <h1 id="threat-modeling">6. Threat Modeling</h1>
 <ul>
 <li>Identifizierung und Priorisierung potenzieller Bedrohungen und Schwachstellen aus der Sicht eines hypothetischen Angreifers</li>
@@ -332,6 +337,7 @@
 <ul>
 <li>Bedrohungen, die Vertrauensgrenzen überschreiten sind relevante Bedrohungen</li>
 </ul>
+<hr>
 <h1 id="penetration-testing">7. Penetration Testing</h1>
 <p>Versuch einer Bewertung der Sicherheit von IT-Infrastruktur durch kontrolliertes Angreifen, Identifizieren und Ausnutzen von Sicherheitslücken</p>
 <h3 id="phasen-von-pen-tests">Phasen von Pen-Tests</h3>
@@ -373,6 +379,7 @@
 <ul>
 <li><strong>Anstellung</strong>: Verknüpfung zu den sicherheitsrelevanten Stellen des Anbieters</li>
 </ul>
+<hr>
 <h1 id="owasp">8. OWASP</h1>
 <blockquote>
 <h2 id="open-web-application-security-project">Open Web Application Security Project</h2>
@@ -427,7 +434,312 @@
 <td align="left">Insufficient Logging &amp; Monitoring</td>
 </tr>
 </tbody>
-</table><h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
+</table><hr>
+<h1 id="cross-site-scripting-xss">9. Cross-Site-Scripting (XSS)</h1>
+<ul>
+<li>XSS sendet ein bösartiges Skript an einen Ahnungslosen Anwender</li>
+<li>Das Skript wird vom Browser nicht erkannt und ausgeführt</li>
+</ul>
+<h3 id="auswirkungen">Auswirkungen</h3>
+<ul>
+<li>Stehlen der Session des Nutzers</li>
+<li>Stehlen von sensiblen Daten</li>
+<li>Neuschreiben der Website</li>
+<li>Weiterleiten der Nutzer auf eine schädliche Website</li>
+</ul>
+<h2 id="risikobewertung">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Einfach</td>
+<td align="left">weit verbreitet</td>
+<td align="left">Einfach</td>
+<td align="left">mittelschwer</td>
+</tr>
+</tbody>
+</table><h3 id="formen-von-xss">Formen von XSS</h3>
+<ul>
+<li>
+<p><strong>Reflected XSS:</strong></p>
+<ul>
+<li>Anwendung liefert den erhaltenen HTTP-Request direkt wieder aus</li>
+<li>Auswertung auf dem Server<br>
+<a href="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/02-02-xss/reflected-xss.png"><img src="https://raw.githubusercontent.com/LeonStoldt/it-security-lecture/master/slides/images/02-02-xss/reflected-xss.png" alt="Reflected XSS"></a></li>
+</ul>
+</li>
+<li>
+<p><strong>Stored XSS:</strong></p>
+<ul>
+<li>Angreifer führt zuerst einen Request durch und speichert das XSS</li>
+<li>Bsp. Kommentare / Reviews<br>
+<a href="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/stored-xss.png"><img src="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/stored-xss.png" alt="Reflected XSS"></a><br>
+viewed at a later time by another user</li>
+</ul>
+</li>
+<li>
+<p><strong>DOM XSS:</strong></p>
+<ul>
+<li>Statisches HTML</li>
+<li>XSS wird nur im DOM ausgewertet, nicht auf dem Server<br>
+<a href="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/dom-xss.png"><img src="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/dom-xss.png" alt="Reflected XSS"></a></li>
+</ul>
+</li>
+</ul>
+<h3 id="prävention">Prävention</h3>
+<ul>
+<li>keinen Userinput als Ausgabe anzeigen</li>
+<li>Userinput codieren</li>
+<li>Eingabeüberprüfung per Whitelist oder Verwendung eines HTML Sanitizers</li>
+</ul>
+<h3 id="eingabevalidierung">Eingabevalidierung</h3>
+<p><strong>Black List:</strong></p>
+<ul>
+<li>Alles erlauben, was nicht explizit verboten ist</li>
+<li>kann durch maskieren von Zeichen umgangen werden</li>
+<li>muss aktualisiert werden</li>
+</ul>
+<p><strong>White List:</strong></p>
+<ul>
+<li>Alles verbieten, was nicht explizit erlaubt ist</li>
+<li>muss mit der Zeit gewartet werden, um nicht schlechter zu werden</li>
+<li>mühsamer, aber kann sicherer sein</li>
+</ul>
+<h3 id="umgehen-client-seitiger-validierung">Umgehen Client-seitiger Validierung</h3>
+<ul>
+<li>Client Side Validation bietet keine Sicherheit!</li>
+<li>ausgehende HTTP-Anfragen können manipuliert werden</li>
+<li>direkte Interaktion mit dem Backend</li>
+</ul>
+<hr>
+<h1 id="injection">10. Injection</h1>
+<p>Eine Anwendung dazu bringen ungewollte Befehle einzubinden und durch den Interpreter anschließend ausführen zu lassen.</p>
+<h2 id="risikobewertung-1">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Einfach</td>
+<td align="left">verbreitet</td>
+<td align="left">Einfach</td>
+<td align="left">Schwer</td>
+</tr>
+</tbody>
+</table><h3 id="typische-auswirkungen">Typische Auswirkungen</h3>
+<ul>
+<li>Umgehung von Authentifizierung</li>
+<li>Daten ausspähen</li>
+<li>Daten manipulieren</li>
+<li>Übernahme des Systems</li>
+</ul>
+<h3 id="beispiele">Beispiele</h3>
+<ul>
+<li><code>admin'--</code></li>
+<li><code>admin'/*</code></li>
+<li><code>' OR 1=1--</code></li>
+<li><code>' OR 1=1/*</code></li>
+<li><code>') OR '1'='1</code></li>
+<li><code>') OR ('1'='1</code></li>
+</ul>
+<h2 id="blind-sql-injection">Blind SQL Injection</h2>
+<p>Ausprobieren, um Schwachstellen durch Reaktionen des Systems zu erkennen</p>
+<h3 id="beispiele-1">Beispiele</h3>
+<ul>
+<li>Boolsche Ausdrücke (z.B. <code>AND 1 = 2</code> or <code>AND 1 = 1</code>)</li>
+<li>Pausen (z.B. <code>WAITFOR DELAY '00:00:10'--</code>)</li>
+</ul>
+<h2 id="prävention-1">Prävention</h2>
+<ul>
+<li>Interpreter vermeiden</li>
+<li>Schnittstelle verwenden, die Variablen unterstützt (Bsp. PreparedStatement, Hibernate etc.)</li>
+<li>Eingabevalidierung per Whitelist</li>
+<li>DB User sollte möchlichst wenig Rechte haben</li>
+</ul>
+<hr>
+<h1 id="authentifizierungsfehler">11. Authentifizierungsfehler</h1>
+<ul>
+<li>Brute-Force oder automatisierte Angriffe</li>
+<li>schwache, bekannte oder übliche Passwörter</li>
+<li>schlechte Prozesse zur Wiederherstellung von Anmeldeinformationen (Bsp. Passwort vergessen)</li>
+<li>schlecht oder gar nicht verschlüsselte Passwörter</li>
+<li>keine MFA</li>
+<li>Session IDs in URL</li>
+<li>schlechtes Session Management</li>
+</ul>
+<h2 id="risikobewertung-2">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Einfach</td>
+<td align="left">verbreitet</td>
+<td align="left">Mittelmäßig</td>
+<td align="left">Schwer</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-2">Prävention</h2>
+<ul>
+<li>Verwendung einzigartiger und Case-Insensitiver  User IDs</li>
+<li>Validiere E-Mail Adressen, wenn diese als Nutzername verwendet werden</li>
+<li>Verwendung starker Passwörter (mind. 10 Zeichen)</li>
+<li>keine regelmäßigen Passwortänderungen erzwingen</li>
+<li>Vermeiden von Regeln zur Passworterstellung</li>
+<li>Bekannte oder schlechte Passwörter nicht zulassen</li>
+<li>Passwörter nur über TLS senden</li>
+<li>Brute-Force Attacken verhindern (z.B. durch Wartezeit, maximale Versuche etc.)</li>
+</ul>
+<h4 id="sicherer-passwort-wiederherstellungsprozess">Sicherer Passwort-Wiederherstellungsprozess</h4>
+<ol>
+<li>Sammeln von Identitätsdaten oder Sicherheitsfragen</li>
+<li>Verifizieren der Sicherheitsfragen</li>
+<li>Konto sofort sperren</li>
+<li>Token über einen anderen Kanal senden</li>
+<li>Nutzer das Passwort ändern lassen</li>
+<li>Protokollieren</li>
+</ol>
+<h2 id="zwei-faktor-authentifizierung">Zwei-Faktor-Authentifizierung</h2>
+<ul>
+<li>zusätzlicher Faktor zur Authentifizierung</li>
+<li>Bsp:
+<ul>
+<li>SMS</li>
+<li>Authenticator App</li>
+<li>Hardware Key</li>
+</ul>
+</li>
+</ul>
+<h2 id="passwort-manager">Passwort Manager</h2>
+<p>Passwort Manager verwalten beliebig viele Nutzerdaten und bieten den Zugriff über ein Master-Passwort. Hierdurch können einzigartige und komplexe Passwörter generiert werden.<br>
+Beispiele</p>
+<ul>
+<li><a href="https://keepass.info/">KeePass</a></li>
+<li><a href="https://www.lastpass.com">LastPass</a></li>
+<li><a href="https://1password.com/">1Password</a></li>
+</ul>
+<hr>
+<h1 id="authorisierungsfehler">12. Authorisierungsfehler</h1>
+<ul>
+<li>Zugreifen auf nicht autorisierte Funktionen oder Daten</li>
+<li>Anzeigen vertraulicher Daten</li>
+<li>Änderung von Daten anderer Nutzer</li>
+<li>Änderung von Zugriffsrechten</li>
+</ul>
+<h3 id="übliche-angriffszenarien">Übliche Angriffszenarien</h3>
+<ul>
+<li>Manipulation der URL oder der Seite</li>
+<li>Änderung des Primärschlüssels anderer Nutzereinträge</li>
+<li>Erhöhen der eigenen Rechte</li>
+<li>Als Admin ausgeben</li>
+<li>Verwendung der API ohne Berechtigungen</li>
+</ul>
+<h2 id="risikobewertung-3">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mittelmäßig</td>
+<td align="left">verbreitet</td>
+<td align="left">Mittelmäßig</td>
+<td align="left">Schwer</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-3">Prävention</h2>
+<ul>
+<li>vertrauenswürdige, serverseitige Zugriffskontrolle</li>
+<li>Einmal Zugriffskontrollmechanismen entwickeln und überall verwenden</li>
+<li>Verzeichnisliste des Webservers deaktivieren</li>
+<li>Fehler bei der Zugriffskontrolle protokollieren und ggf. melden</li>
+<li>Zugriffsversuche der API beschränken</li>
+<li>ungültige Zugriffstoken nach Abmeldung</li>
+<li>Zugriffskontrolle durch Unit-, Integrationtest und QA sichern</li>
+</ul>
+<hr>
+<h1 id="sensible-daten">13. Sensible Daten</h1>
+<ul>
+<li>Passwörter</li>
+<li>Kreditkartennummern</li>
+<li>Gesundheitsdaten</li>
+<li>Persönliche Informationen
+<ul>
+<li>Name und Vorname</li>
+<li>Adresse</li>
+<li>Email Adresse</li>
+<li>Personalausweisnummer</li>
+<li>Geodaten</li>
+<li>IP Adresse</li>
+<li>…</li>
+</ul>
+</li>
+<li>Geschäftsgeheimnisse</li>
+</ul>
+<h1 id="preisgabe-sensitiver-daten">Preisgabe sensitiver Daten</h1>
+<ul>
+<li>Fehler beim Ermitteln der Schutzanforderungen</li>
+<li>Übertragung im Klartext (Bsp. HTTP)</li>
+<li>Verwendung schwacher Verschlüsselung</li>
+<li>Keine Verschlüsselung durch den Browser</li>
+<li>Fehlende Zertifikatsprüfung</li>
+</ul>
+<h2 id="risikobewertung-4">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mittelmäßig</td>
+<td align="left">weit verbreitet</td>
+<td align="left">Mittelmäßig</td>
+<td align="left">Schwer</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-4">Prävention</h2>
+<ul>
+<li>Klassifizierung von Daten und deren Wichtigkeit</li>
+<li>sensible Daten nicht ohne wichtigen Grund speichern</li>
+<li>Einsatz aktueller Technologie (Algorithmen, Protokolle, Schlüssel)</li>
+<li>Sicherstellung eines guten Kryptografieschutzes, selbst wenn die Zugriffskontrolle umgangen werden sollte</li>
+</ul>
+<hr>
+<h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
 <li>
 <h3 id="virustotal"><a href="https://www.virustotal.com/">Virustotal</a></h3>
@@ -461,6 +773,9 @@
 </li>
 <li>
 <h3 id="owasp-2"><a href="https://www.owasp.org">OWASP</a></h3>
+</li>
+<li>
+<h3 id="twofactorauth.org"><a href="https://twofactorauth.org/">TwoFactorAuth.org</a></h3>
 </li>
 </ul>
 <h3 id="owasp-projects"><a href="https://www.owasp.org/index.php/Category:OWASP_Project">OWASP Projects</a></h3>
