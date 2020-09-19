@@ -505,6 +505,56 @@ viewed at a later time by another user</li>
 <li>ausgehende HTTP-Anfragen können manipuliert werden</li>
 <li>direkte Interaktion mit dem Backend</li>
 </ul>
+<h1 id="injection">Injection</h1>
+<p>Eine Anwendung dazu bringen ungewollte Befehle einzubinden und durch den Interpreter anschließend ausführen zu lassen.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">AUsnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Einfach</td>
+<td align="left">verbreitet</td>
+<td align="left">Einfach</td>
+<td align="left">Schwer</td>
+</tr>
+</tbody>
+</table><h3 id="typische-auswirkungen">Typische Auswirkungen</h3>
+<ul>
+<li>Umgehung von Authentifizierung</li>
+<li>Daten ausspähen</li>
+<li>Daten manipulieren</li>
+<li>Übernahme des Systems</li>
+</ul>
+<h3 id="beispiele">Beispiele</h3>
+<ul>
+<li><code>admin'--</code></li>
+<li><code>admin'/*</code></li>
+<li><code>' OR 1=1--</code></li>
+<li><code>' OR 1=1/*</code></li>
+<li><code>') OR '1'='1</code></li>
+<li><code>') OR ('1'='1</code></li>
+</ul>
+<h2 id="blind-sql-injection">Blind SQL Injection</h2>
+<p>Ausprobieren, um Schwachstellen durch Reaktionen des Systems zu erkennen</p>
+<h3 id="beispiele-1">Beispiele</h3>
+<ul>
+<li>Boolsche Ausdrücke (z.B. <code>AND 1 = 2</code> or <code>AND 1 = 1</code>)</li>
+<li>Pausen (z.B. <code>WAITFOR DELAY '00:00:10'--</code>)</li>
+</ul>
+<h2 id="prävention-1">Prävention</h2>
+<ul>
+<li>Interpreter vermeiden</li>
+<li>Schnittstelle verwenden, die Variablen unterstützt (Bsp. PreparedStatement, Hibernate etc.)</li>
+<li>Eingabevalidierung per Whitelist</li>
+<li>DB User sollte möchlichst wenig Rechte haben</li>
+</ul>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
 <li>
