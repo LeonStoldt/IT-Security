@@ -733,6 +733,166 @@ Beispiele</p>
 <li>Sicherstellung eines guten Kryptografieschutzes, selbst wenn die Zugriffskontrolle umgangen werden sollte</li>
 </ul>
 <hr>
+<h1 id="unsichere-abhängigkeiten-und-konfigurationen">Unsichere Abhängigkeiten und Konfigurationen</h1>
+<h2 id="unsichere-abhängigkeiten">Unsichere Abhängigkeiten</h2>
+<h3 id="häufige-fehler-bei-anhängigkeiten">Häufige Fehler bei Anhängigkeiten</h3>
+<ul>
+<li>Keine Ahnung / Kontrolle der verwendeten Versionen der Abhängigkeiten</li>
+<li>Verwendete Abhängigkeit ist anfällig für Angriffe oder wird nicht mehr unterstützt</li>
+</ul>
+<h2 id="risikobewertung-5">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mittelmäßig</td>
+<td align="left">weit verbreitet</td>
+<td align="left">Mittelmäßig</td>
+<td align="left">mild</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-5">Prävention</h2>
+<ul>
+<li>Nicht verwendete oder unnötige Abhängigkeiten vermeiden und entfernen</li>
+<li>Kontinuierliches Überwachen der Schwachstellen von Abhängigkeiten</li>
+<li>Nur offizielle Abhängigkeiten von sicheren Links einbinden</li>
+<li>Regelmäßiges Aktualisieren der Versionen aller Abhängigkeiten</li>
+</ul>
+<h2 id="unsichere-konfigurationen">Unsichere Konfigurationen</h2>
+<h3 id="häufige-fehler">Häufige Fehler:</h3>
+<ul>
+<li>Falsch konfigurierte Berechtigungen</li>
+<li>Unnötige Funktionen wurden aktiviert / installiert</li>
+<li>Standardkonten oder -credentials sind noch aktiviert</li>
+<li>Preisgabe zu vieler Informationen (Bsp. Stacktrace)</li>
+<li>Deaktivierung von den neuesten Sicherheitsfunktionen</li>
+<li>Veraltete oder Anfällige Software</li>
+</ul>
+<h3 id="potentielle-auswirkungen">Potentielle Auswirkungen</h3>
+<ul>
+<li>unauthorisierter Zugriff auf Systemdaten oder -funktionalitäten</li>
+<li>Systemübernahme durch z.B. Backdoors</li>
+</ul>
+<h2 id="risikobewertung-6">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Einfach</td>
+<td align="left">weit verbreitet</td>
+<td align="left">Einfach</td>
+<td align="left">mild</td>
+</tr>
+</tbody>
+</table><h1 id="web-shells">Web Shells</h1>
+<p>Web Shells sind Skripte, die auf einem Webserver hochgeladen werden können und für eine Remotevewaltung zum Server sorgen. Sie können in jeder Sprache geschrieben werden, die der Zielserver unterstützt.</p>
+<h3 id="prävention-6">Prävention</h3>
+<ul>
+<li>Entwicklungs-, Qualitätssicherungs- und Produktionsumgebung identisch konfigurieren</li>
+<li>segmentierte Anwendungsarchitektur</li>
+<li>Regelmäßige Überprüfung der Konfigurationen</li>
+</ul>
+<h1 id="xee-und-deserialisierung">XEE und Deserialisierung</h1>
+<h2 id="xee---xml-external-entities">XEE - (XML External Entities)</h2>
+<p>XML Entities sind “Variablen” in XML, die später referenziert werden können. Bsp:</p>
+<pre class=" language-xml"><code class="prism  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ENTITY</span> <span class="token attr-name">foo</span> <span class="token attr-name">"FOO"</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- Definition einer externen Entity --&gt;</span>
+&lt;!ENTITY foo "https://raw.githubusercontent.com/bkimminich/juice-shop/gh-pages/entities.dtd"&gt;
+<span class="token comment">&lt;!-- Anwenden --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foobar</span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&amp;foo;">&amp;foo;</span> <span class="token entity" title="&amp;bar;">&amp;bar;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>foobar</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Viele ältere oder schlecht konfigurierte XML-Prozessoren werten (externe) Entities aus und Angreifer können potentiell folgende Angriffe durchführen:</p>
+<ul>
+<li>interne Dateien offenlegen</li>
+<li>internes Port-Scannen</li>
+<li>Remote-Code Execution</li>
+<li>DoS Attacken</li>
+</ul>
+<h2 id="risikobewertung-7">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mittelmäßig</td>
+<td align="left">verbreitet</td>
+<td align="left">Einfach</td>
+<td align="left">Schwerwiegend</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-7">Prävention</h2>
+<ul>
+<li>richtige Konfiguration des XML-Parsers:
+<ul>
+<li>kein parsen <strong>jeglicher</strong> Entities</li>
+<li>kein parsen von <strong>externen Entities</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="deserialisierung">Deserialisierung</h2>
+<p><strong>Serialisierung</strong> wandelt ein Objekt in einen Bytestream um, welcher ausreichend Informationen zur Herstellung einer Ausgangszustands besitzt.</p>
+<p><strong>Deserialisierung</strong> wandelt einen Bytestream wieder in ein Objekt um. Beispiel in Java:</p>
+<pre class=" language-java"><code class="prism  language-java">InputStream is <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ObjectInputStream ois <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectInputStream</span><span class="token punctuation">(</span>is<span class="token punctuation">)</span><span class="token punctuation">;</span>
+AcmeObject acme <span class="token operator">=</span> <span class="token punctuation">(</span>AcmeObject<span class="token punctuation">)</span>ois<span class="token punctuation">.</span><span class="token function">readObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Das Casten auf AcmeObject geschieht nach dem Deserialisierungsprozess</span>
+</code></pre>
+<p>Unsichere Deserialisierung sorgt häufig für eine Remote-Code Execution und kann folgende Attacken ausführen:</p>
+<ul>
+<li>Injection</li>
+<li>DoS</li>
+</ul>
+<h2 id="risikobewertung-8">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Schwierig</td>
+<td align="left">verbreitet</td>
+<td align="left">Mittelmäßig</td>
+<td align="left">Schwerwiegend</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-8">Prävention</h2>
+<ul>
+<li>Vermeiden von nativen Deserialisierungsformaten</li>
+<li>Verwendung von JSON / XML</li>
+<li>Verwendung von DTOs (Data Transfer Objects)</li>
+<li>Signierung der serialisierten Objekte und Prüfung bei Deserialisierung</li>
+<li>isolierte Deserialisierung mit geringen Berechtigungen</li>
+</ul>
+<hr>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
 <li>
@@ -770,6 +930,12 @@ Beispiele</p>
 </li>
 <li>
 <h3 id="twofactorauth.org"><a href="https://twofactorauth.org/">TwoFactorAuth.org</a></h3>
+</li>
+<li>
+<h3 id="shodan"><a href="https://www.shodan.io">Shodan</a></h3>
+</li>
+<li>
+<h3 id="mozilla-observatory"><a href="https://observatory.mozilla.org/">Mozilla Observatory</a></h3>
 </li>
 </ul>
 <h3 id="owasp-projects"><a href="https://www.owasp.org/index.php/Category:OWASP_Project">OWASP Projects</a></h3>
