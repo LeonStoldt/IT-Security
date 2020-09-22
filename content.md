@@ -483,7 +483,8 @@ viewed at a later time by another user</li>
 <p><strong>DOM XSS:</strong></p>
 <ul>
 <li>Statisches HTML</li>
-<li>XSS wird nur im DOM ausgewertet, nicht auf dem Server<br>
+<li>XSS wird nur im DOM ausgewertet, nicht auf dem Server</li>
+<li>findet direkt im Browser statt (es wird nichts zum Server geschickt)<br>
 <a href="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/dom-xss.png"><img src="https://github.com/LeonStoldt/it-security-lecture/raw/master/slides/images/02-02-xss/dom-xss.png" alt="Reflected XSS"></a></li>
 </ul>
 </li>
@@ -733,7 +734,7 @@ Beispiele</p>
 <li>Sicherstellung eines guten Kryptografieschutzes, selbst wenn die Zugriffskontrolle umgangen werden sollte</li>
 </ul>
 <hr>
-<h1 id="unsichere-abhängigkeiten-und-konfigurationen">Unsichere Abhängigkeiten und Konfigurationen</h1>
+<h1 id="unsichere-abhängigkeiten-und-konfigurationen">14. Unsichere Abhängigkeiten und Konfigurationen</h1>
 <h2 id="unsichere-abhängigkeiten">Unsichere Abhängigkeiten</h2>
 <h3 id="häufige-fehler-bei-anhängigkeiten">Häufige Fehler bei Anhängigkeiten</h3>
 <ul>
@@ -808,7 +809,7 @@ Beispiele</p>
 <li>segmentierte Anwendungsarchitektur</li>
 <li>Regelmäßige Überprüfung der Konfigurationen</li>
 </ul>
-<h1 id="xee-und-deserialisierung">XEE und Deserialisierung</h1>
+<h1 id="xee-und-deserialisierung">15. XEE und Deserialisierung</h1>
 <h2 id="xee---xml-external-entities">XEE - (XML External Entities)</h2>
 <p>XML Entities sind “Variablen” in XML, die später referenziert werden können. Bsp:</p>
 <pre class=" language-xml"><code class="prism  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>!ENTITY</span> <span class="token attr-name">foo</span> <span class="token attr-name">"FOO"</span><span class="token punctuation">&gt;</span></span>
@@ -892,6 +893,175 @@ AcmeObject acme <span class="token operator">=</span> <span class="token punctua
 <li>Signierung der serialisierten Objekte und Prüfung bei Deserialisierung</li>
 <li>isolierte Deserialisierung mit geringen Berechtigungen</li>
 </ul>
+<h1 id="sicherer-entwicklungslebenszyklus">16. Sicherer Entwicklungslebenszyklus</h1>
+<ul>
+<li>Späte Erkennung von Fehlern ist immer teurer als frühe Erkennung</li>
+<li>Security muss in alle Phasen des Entwicklungsprozesses eingebunden sein</li>
+<li>Sicherheitsexperten und Management-Unterstützung sind notwendig</li>
+</ul>
+<h2 id="sicherheitsanforderungen">Sicherheitsanforderungen</h2>
+<h3 id="ableiten-von-sicherheitsanforderungen">Ableiten von Sicherheitsanforderungen</h3>
+<ul>
+<li>Sicherheitsanforderungen mit fachlichem Stakeholder ableiten (beim Anforderungsmanagement)</li>
+<li>Bsp.
+<ul>
+<li>Datensicherheit</li>
+<li>Zugriffskontrolle</li>
+<li>Wie kritisch sind die Daten?</li>
+<li>Verfügbarkeit</li>
+<li>Vorgaben durch Industriestandards</li>
+</ul>
+</li>
+</ul>
+<h1 id="sicherheits-designprinzipien">Sicherheits-Designprinzipien</h1>
+<ol>
+<li>
+<p><strong>Angriffsflächen minimieren</strong></p>
+<ul>
+<li>Unnötige Features vermeiden</li>
+</ul>
+</li>
+<li>
+<p><strong>sichere Standardeinstellungen</strong></p>
+<ul>
+<li>Sicherheit als Standard - Benutzer entscheiden Reduzierung ihrer Sicherheit</li>
+</ul>
+</li>
+<li>
+<p><strong>Prinzip des geringsten Privelegs</strong></p>
+<ul>
+<li>Keine “root”-User verwenden</li>
+<li>möglichst minimale Rechte für den User</li>
+</ul>
+</li>
+<li>
+<p><strong>Prinzip der Tiefenverteidigung</strong></p>
+<ul>
+<li>Mehrere Sicherheitsschichten bieten</li>
+</ul>
+</li>
+<li>
+<p><strong>Fail securely</strong></p>
+<ul>
+<li>Wenn etwas schief geht, dann sollte “die Tür zugemacht werden”</li>
+</ul>
+</li>
+<li>
+<p><strong>Keinen Diensten vertrauen</strong></p>
+<ul>
+<li>Nicht blind (externen) Systemen, mit denen man interagiert vertrauen</li>
+</ul>
+</li>
+<li>
+<p><strong>Aufgabentrennung</strong></p>
+<ul>
+<li>Aufgaben trennen zur Betrugsvermeidung</li>
+<li>Bsp: Admin dar nicht gleichzeitig User sein</li>
+</ul>
+</li>
+<li>
+<p><strong>"Security by Obscurity" vermeiden</strong></p>
+<ul>
+<li>Verstecken von Funktionen bietet keinen Schutz gegen Angreifer</li>
+</ul>
+</li>
+<li>
+<p><strong>Sicherheit einfach halten</strong></p>
+<ul>
+<li>Einfaches Security Design</li>
+</ul>
+</li>
+<li>
+<p><strong>Korrekte Behebung von Sicherheitsproblemen</strong></p>
+<ul>
+<li>Keine Symptome, sondern Ursachen beheben</li>
+</ul>
+</li>
+</ol>
+<h2 id="sichere-entwicklungsrichtlinien">Sichere Entwicklungsrichtlinien</h2>
+<ul>
+<li>Secure Coding Guidelines werden häufig von Entwicklern übersehen</li>
+<li>Checklisten (kurz gehaltene Dokumente) funktionieren besser</li>
+</ul>
+<h2 id="security-testing">Security Testing</h2>
+<p>Bsp. SonarQube, SpotBugs (früher FindBugs)</p>
+<h3 id="statische-code-analyse">Statische Code-Analyse</h3>
+<p><strong>Stärken:</strong></p>
+<ul>
+<li>skaliert gut</li>
+<li>automatisierte Tests, ohne dass die Anwendung läuft</li>
+<li>generierter Output kann gut von Entwicklern für Verbesserungen verwendet werden</li>
+</ul>
+<p><strong>Schwächen:</strong></p>
+<ul>
+<li>False-Positives (Falsche Fehlermeldungen)</li>
+<li>Viele Sicherheitslücken sind schwierig zu finden</li>
+<li>Nur ein kleiner Teil kann abgedeckt werden</li>
+<li>Schwierig eine Schwachstelle tatsächlich nachzuweisen</li>
+</ul>
+<h3 id="dynamische-sicherheitstesting-tools">Dynamische Sicherheitstesting Tools</h3>
+<p>Bsp: ZAP (Zed Attack Proxy)</p>
+<p>Dynamisches Testing auf Sicherheit wird bei laufenden Anwendungen durchgeführt und können automatisiert oder teilweise manuell Tests durchführen.</p>
+<h2 id="logging-und-monitoring">Logging und Monitoring</h2>
+<p>Angreifer können unentdeckt agieren, wenn sinnlos oder gar nicht geloggt wird oder nicht auf die Logs geschaut wird.</p>
+<p>Wichtige Aspekte sind:</p>
+<ul>
+<li>Login</li>
+<li>Berechtigungswechsel</li>
+<li>Warnungen und Errormeldungen</li>
+<li>Suspekte Aktivitäten</li>
+</ul>
+<h2 id="risikobewertung-9">Risikobewertung</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Ausnutzbarkeit</th>
+<th align="left">Häufigkeit</th>
+<th align="left">Erkennbarkeit</th>
+<th align="left">Einfluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mittelmäßig</td>
+<td align="left">weit verbreitet</td>
+<td align="left">Schwierig</td>
+<td align="left">Mittelmäßig</td>
+</tr>
+</tbody>
+</table><h2 id="prävention-9">Prävention</h2>
+<ul>
+<li>ausreichendes und sinnvolles Logging von Login, Zugangskontrollen (-fehlern) und Server-Side Input</li>
+<li>Übersichtliche Logs in einem gesammelten System (Splunk, ELK-Stack)</li>
+<li>Erstellung eines Recovery-Plans</li>
+</ul>
+<h2 id="web-application-firewall-waf">Web Application Firewall (WAF)</h2>
+<ul>
+<li>Zusätzliche Firewall zur Kontrolle des Traffics</li>
+<li>Verhindert bösartige Requests</li>
+</ul>
+<p><a href="https://github.com/bkimminich/it-security-lecture/raw/master/slides/images/02-09-sdlc/WAF_Archi.png"><img src="https://github.com/bkimminich/it-security-lecture/raw/master/slides/images/02-09-sdlc/WAF_Archi.png" alt=""></a></p>
+<h3 id="risiken">Risiken</h3>
+<ul>
+<li>Zusätzliche IT-Infrastruktur</li>
+<li>kann viele False-Positives melden</li>
+<li>Selbstlernmechanismen können schwierigkeiten beinhalten</li>
+<li>kann Fehler enthalten</li>
+<li>sehr teuer</li>
+</ul>
+<h1 id="waf-modes">WAF Modes</h1>
+<ul>
+<li>
+<p><strong>Blocking Mode</strong>: Normaler Modus, bei dem die WAF erkannten Traffic blockt.</p>
+</li>
+<li>
+<p><strong>Monitoring Mode</strong>: Die WAF alamiert, aber blockt nicht.</p>
+</li>
+<li>
+<p><strong>Learning Mode</strong>: Die WAF lernt durch gutartigen Traffic, was normal und valide ist.</p>
+</li>
+</ul>
 <hr>
 <h1 id="sammlung-nützlicher-links">Sammlung nützlicher Links</h1>
 <ul>
@@ -936,6 +1106,9 @@ AcmeObject acme <span class="token operator">=</span> <span class="token punctua
 </li>
 <li>
 <h3 id="mozilla-observatory"><a href="https://observatory.mozilla.org/">Mozilla Observatory</a></h3>
+</li>
+<li>
+<h3 id="owasp-cheat-sheet"><a href="https://cheatsheetseries.owasp.org/Glossary.html">OWASP Cheat Sheet</a></h3>
 </li>
 </ul>
 <h3 id="owasp-projects"><a href="https://www.owasp.org/index.php/Category:OWASP_Project">OWASP Projects</a></h3>
